@@ -1,0 +1,2 @@
+CREATE DATABASE BlazeDb;
+USE BlazeDb;

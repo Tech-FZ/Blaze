@@ -1,0 +1,41 @@
+@page "/Character/"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Models
+@inject IDbContextFactory<BlazeDbContext> DbFactory;
+
+<PageTitle>People - Blaze</PageTitle>
+
+<h1>Blaze</h1>
+<h2>A Blazor-based management UI</h2>
+
+<div>
+    <QuickGrid Class="table" Items="FilteredCharacters" Pagination="pagination">
+        <PropertyColumn Property="character => character.Name" Sortable="true"/>
+        <PropertyColumn Property="character => character.BirthDate" Title="Birth Date" Sortable="true"/>
+        <PropertyColumn Property="character => character.IsStudent" Title="Is Student"/>
+
+        <TemplateColumn Context="character">
+            <a href="@($"Character/edit?id={character.Id}")">Edit</a> |
+            <a href="@($"Character/delete?id={character.Id}")">Delete</a>
+        </TemplateColumn>
+    </QuickGrid>
+</div>
+
+@code {
+    private BlazeDbContext context = default!;
+
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 5 };
+
+    private IQueryable<Character> FilteredCharacters => context.Characters;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

@@ -1,0 +1,21 @@
+using System.Collections.ObjectModel;
+
+namespace Test_Demo1.Models
+{
+    public class Character : Entity
+    {
+        public string? Name {get; set;}
+
+        public DateTime BirthDate {get; set;}
+
+        public Gender? SelectedGender {get; set;}
+
+        public ObservableCollection<SocialMedia>? SocialMedias {get; set;}
+
+        public Address? SelectedAddress {get; set;}
+
+        public Company? SelectedCompany {get; set;}
+
+        public bool IsStudent {get; set;}
+    }
+}
