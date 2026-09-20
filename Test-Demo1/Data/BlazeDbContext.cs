@@ -19,5 +19,9 @@ namespace Test_Demo1.Data
         public DbSet<Character> Characters {get; set;} = default!;
 
         public DbSet<Company> Companies {get; set;} = default!;
+
+        public DbSet<Gender> Genders {get; set;} = default!;
+
+        public DbSet<SocialMedia> SocialMedias {get; set;} = default!;
     }
 }
