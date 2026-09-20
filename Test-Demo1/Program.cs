@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Test_Demo1.Components;
 using Test_Demo1.Data;
+using Test_Demo1.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
