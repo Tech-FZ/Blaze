@@ -307,3 +307,4 @@ C:\Users\nlettau\OneDrive - BSZKE\AEuP\2026 und 2027\Framework-Vorstellung Blaze
 C:\Users\nlettau\OneDrive - BSZKE\AEuP\2026 und 2027\Framework-Vorstellung Blazer\Test-Demo\Test-Demo1\bin\Debug\net10.0\runtimes\win-x64\native\krb5_64.dll
 C:\Users\nlettau\OneDrive - BSZKE\AEuP\2026 und 2027\Framework-Vorstellung Blazer\Test-Demo\Test-Demo1\bin\Debug\net10.0\runtimes\win-x64\native\krbcc64.dll
 C:\Users\nlettau\OneDrive - BSZKE\AEuP\2026 und 2027\Framework-Vorstellung Blazer\Test-Demo\Test-Demo1\bin\Debug\net10.0\runtimes\win\lib\net10.0\System.Windows.Extensions.dll
+C:\Users\nlettau\OneDrive - BSZKE\AEuP\2026 und 2027\Framework-Vorstellung Blazer\Test-Demo\Test-Demo1\obj\Debug\net10.0\Test-Demo1.sourcelink.json

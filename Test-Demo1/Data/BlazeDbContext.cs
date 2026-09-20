@@ -10,6 +10,12 @@ namespace Test_Demo1.Data
             
         }
 
+        // protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // {
+        //     base.OnModelCreating(modelBuilder);
+        //     modelBuilder.Entity<Character>
+        // }
+
         public DbSet<Character> Characters {get; set;} = default!;
 
         public DbSet<Company> Companies {get; set;} = default!;

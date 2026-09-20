@@ -12,8 +12,6 @@ namespace Test_Demo1.Models
 
         public ObservableCollection<SocialMedia>? SocialMedias {get; set;}
 
-        public Address? SelectedAddress {get; set;}
-
         public Company? SelectedCompany {get; set;}
 
         public bool IsStudent {get; set;}
