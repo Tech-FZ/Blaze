@@ -8,6 +8,7 @@ builder.Services.AddDbContextFactory<BlazeDbContext>(
     options => options.UseMySQL(builder.Configuration.GetConnectionString("BlazeDbContext") 
                     ?? throw new NullReferenceException("BlazeDbContext connection string not found."))); 
 
+
 builder.Services.AddQuickGridEntityFrameworkAdapter();
 
 /*
