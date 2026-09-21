@@ -1,25 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj": {}
+    "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj": {
+    "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj",
+        "projectUniqueName": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
         "projectName": "Test-Demo1",
-        "projectPath": "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj",
+        "projectPath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
         "packagesPath": "C:\\Users\\nlettau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\obj\\",
+        "outputPath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nlettau\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\nlettau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 24.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

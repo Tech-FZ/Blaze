@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nibEF6lRLEQ=",
+  "dgSpecHash": "1zQvVWdQtIo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj",
+  "projectFilePath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nlettau\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
     "C:\\Users\\nlettau\\.nuget\\packages\\google.protobuf\\3.35.0\\google.protobuf.3.35.0.nupkg.sha512",
@@ -126,10 +126,10 @@
     {
       "code": "NU1901",
       "level": "Warning",
-      "message": "Das Paket \"NuGet.Packaging\" 6.12.1 weist eine bekannte Niedrig Schweregrad-Sicherheitsanfälligkeit auf, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg.",
-      "projectPath": "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj",
+      "message": "Package 'NuGet.Packaging' 6.12.1 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "projectPath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj",
+      "filePath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
       "libraryId": "NuGet.Packaging",
       "targetGraphs": [
         "net10.0"
@@ -138,10 +138,10 @@
     {
       "code": "NU1901",
       "level": "Warning",
-      "message": "Das Paket \"NuGet.Protocol\" 6.12.1 weist eine bekannte Niedrig Schweregrad-Sicherheitsanfälligkeit auf, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg.",
-      "projectPath": "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj",
+      "message": "Package 'NuGet.Protocol' 6.12.1 has a known low severity vulnerability, https://github.com/advisories/GHSA-g4vj-cjjj-v7hg",
+      "projectPath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\nlettau\\OneDrive - BSZKE\\AEuP\\2026 und 2027\\Framework-Vorstellung Blazer\\Test-Demo\\Test-Demo1\\Test-Demo1.csproj",
+      "filePath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
       "libraryId": "NuGet.Protocol",
       "targetGraphs": [
         "net10.0"

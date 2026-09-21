@@ -19,17 +19,33 @@ namespace Test_Demo1.Mappers
                 characterDto.SelectedCompanyId = a.SelectedCompany.Id;
             }
 
+            characterDto.SelectedCompanyId = a.SelectedCompanyId;
+
             if (a.SelectedGender != null)
             {
                 characterDto.SelectedGenderId = a.SelectedGender.Id;
             }
+
+            characterDto.SelectedGenderId = a.SelectedGenderId;
 
             return characterDto;
         }
 
         public Character FromBToA(CharacterDto b)
         {
-            throw new NotImplementedException();
+            Character character = new Character
+            {
+                Id = b.Id,
+                IsStudent = b.IsStudent,
+                Name = b.Name,
+                BirthDate = b.BirthDate,
+                SelectedCompanyId = b.SelectedCompanyId,
+                SelectedGenderId = b.SelectedGenderId
+            };
+
+            // TODO: Fetch company and gender from database?
+
+            return character;
         }
     }
 }

@@ -61,7 +61,7 @@ else
                         class="form-select">
                         @foreach (var company in Companies)
                         {
-                            <option value="@company">@company.Name</option>
+                            <option value="@company.Id">@company.Name</option>
                         }
                     </InputSelect>
                 </div>
@@ -84,7 +84,15 @@ else
 
     private IQueryable<Gender> Genders => context.Genders;
 
-    private IQueryable<Company> Companies => context.Companies;
+    private IQueryable<Company> Companies
+    {
+        get
+        {
+            var companyContext = DbFactory.CreateDbContext();
+            var companies = companyContext.Companies;
+            return companies;
+        }
+    }
 
     protected override async Task OnInitializedAsync()
     {
@@ -92,8 +100,9 @@ else
         characterMapper = new CharacterMapper();
 
         // todo: filter by id
-        SelectedCharacter = context.Characters.Select(
-            c => characterMapper.FromAToB(c)).FirstOrDefault();
+        SelectedCharacter = context.Characters.AsNoTracking().Select(
+            c => characterMapper.FromAToB(c)).ToList()
+            .FirstOrDefault(c => c.Id == Id);
 
         if (SelectedCharacter == null)
         {
@@ -103,7 +112,8 @@ else
 
     private async Task UpdateCharacter()
     {
-        context.Attach(SelectedCharacter!).State = EntityState.Modified;
+        // TODO: The updates from the UI must be passed on to the actual SelectedCharacter variable.
+        context.Attach(characterMapper.FromBToA(SelectedCharacter!)).State = EntityState.Modified;
 
         try
         {
