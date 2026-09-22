@@ -1,9 +1,94 @@
 @page "/Character/Delete"
+@rendermode InteractiveServer
 @using Microsoft.EntityFrameworkCore
 @using Test_Demo1.Data
+@using Test_Demo1.Mappers
 @using Test_Demo1.Models
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager;
 
 <PageTitle>Delete Person - Blaze</PageTitle>
 
+<h1>Delete Person</h1>
+
+<p>Are you sure you want to delete the following person?</p>
+
+<div>
+    @if (characterDto == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+
+    else
+    {
+        <dl class="row">
+            <dt class="col-sm-2">Name</dt>
+            <dd class="col-sm-10">@characterDto.Name</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Birth Date</dt>
+            <dd class="col-sm-10">@characterDto.BirthDate</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Is Student</dt>
+            <dd class="col-sm-10">@characterDto.IsStudent</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Gender</dt>
+            <dd class="col-sm-10">@characterDto.SelectedGender.LongName</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Company</dt>
+            <dd class="col-sm-10">@characterDto.SelectedCompany.Name</dd>
+        </dl>
+
+        <EditForm Model="characterDto" OnValidSubmit="DeleteCharacter" FormName="delete">
+            <button type="submit" class="btn btn-danger" disabled="@(characterDto == null)">Delete</button> |
+            <a href="/Character">Back to Character List</a>
+        </EditForm>
+    }
+</div>
+
+@code {
+    private Character? characterDto;
+
+    private CharacterMapper? characterMapper;
+
+    [SupplyParameterFromQuery]
+    private int Id {get; set;}
+
+    protected override async Task OnInitializedAsync()
+    {
+        characterMapper = new();
+    }
+
+    protected override void OnParametersSet()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        characterDto = context.Characters.Include(c => c.SelectedGender).Include(c => c.SelectedCompany)
+            .FirstOrDefault(c => c.Id == Id);
+
+        if (characterDto == null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+
+    private async Task DeleteCharacter()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        if (characterDto != null)
+        {
+            context.Characters.Remove(characterDto);
+        }
+
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/Character");
+    }
+}
