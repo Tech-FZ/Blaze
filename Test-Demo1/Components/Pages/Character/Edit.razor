@@ -66,6 +66,12 @@ else
                     </InputSelect>
                 </div>
 
+                <div class="mb-3">
+                    <label for="isStudent" class="form-label">Is Student:</label>
+
+                    <InputCheckbox id="isStudent" @bind-Value="SelectedCharacter.IsStudent" class="form-checkbox"/>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Save</button>
             </EditForm>
         </div>
@@ -79,7 +85,6 @@ else
     [SupplyParameterFromQuery]
     private int Id { get; set; }
 
-    //[SupplyParameterFromForm]
     private CharacterDto? SelectedCharacter { get; set; }
 
     private CharacterDto? DbCharacter { get; set; }
