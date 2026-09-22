@@ -18,7 +18,9 @@ CREATE TABLE Characters (
     BirthDate DATE NOT NULL,
     SelectedGenderId INT NOT NULL,
     IsStudent BIT NOT NULL DEFAULT 0,
-    SelectedCompanyId INT NOT NULL
+    SelectedCompanyId INT NOT NULL,
+    CONSTRAINT fk_Company FOREIGN KEY (SelectedCompanyId) REFERENCES Companies(Id),
+    CONSTRAINT fk_Gender FOREIGN KEY (SelectedGenderId) REFERENCES Genders(Id)
 );
 
 CREATE TABLE SocialMedias (
@@ -26,5 +28,7 @@ CREATE TABLE SocialMedias (
     Platform VARCHAR(50) NOT NULL,
     Link VARCHAR(255) NOT NULL,
     SelectedCompanyId INT NULL,
-    SelectedCharacterId INT NULL
+    SelectedCharacterId INT NULL,
+    CONSTRAINT fk_Company FOREIGN KEY (SelectedCompanyId) REFERENCES Companies(Id),
+    CONSTRAINT fk_Character FOREIGN KEY (SelectedCharacterId) REFERENCES Characters(Id)
 );

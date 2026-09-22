@@ -22,6 +22,7 @@
         <PropertyColumn Property="character => character.SelectedCompany.Name" Title="Company" Sortable="true"/>
 
         <TemplateColumn Context="character">
+            <a href="@($"Character/Details?id={character.Id}")">Details</a> |
             <a href="@($"Character/Edit?id={character.Id}")">Edit</a> |
             <a href="@($"Character/Delete?id={character.Id}")">Delete</a>
         </TemplateColumn>

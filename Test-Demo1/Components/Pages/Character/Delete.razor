@@ -53,18 +53,22 @@
     }
 </div>
 
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
+        <strong>Error:</strong> @ErrorMessage
+    </div>
+}
+
 @code {
     private Character? characterDto;
 
     private CharacterMapper? characterMapper;
 
+    private string? ErrorMessage {get; set;}
+
     [SupplyParameterFromQuery]
     private int Id {get; set;}
-
-    protected override async Task OnInitializedAsync()
-    {
-        characterMapper = new();
-    }
 
     protected override void OnParametersSet()
     {
@@ -81,14 +85,22 @@
 
     private async Task DeleteCharacter()
     {
-        using var context = DbFactory.CreateDbContext();
+        ErrorMessage = null;
+        var context = DbFactory.CreateDbContext();
 
         if (characterDto != null)
         {
-            context.Characters.Remove(characterDto);
-        }
+            if (context.SocialMedias.Include(sm => sm.SelectedCharacter).Any(sm => sm.SelectedCharacter.Id == characterDto.Id))
+            {
+                ErrorMessage = "There are still social media links attached to this person. Please delete those first.";
+            }
 
-        await context.SaveChangesAsync();
-        NavigationManager.NavigateTo("/Character");
+            else
+            {
+                context.Characters.Remove(characterDto);
+                await context.SaveChangesAsync();
+                NavigationManager.NavigateTo("/Character");
+            }
+        }
     }
 }
