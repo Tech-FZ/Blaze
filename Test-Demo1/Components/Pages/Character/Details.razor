@@ -51,8 +51,8 @@
             <PropertyColumn Property="sm => sm.Link"/>
 
             <TemplateColumn Context="sm">
-                <a href="@($"SocialMedia/Edit?id={sm.Id}")">Edit</a> |
-                <a href="@($"SocialMedia/Delete?id={sm.Id}")">Delete</a>
+                <a href="@($"/SocialMedia/Edit?id={sm.Id}")">Edit</a> |
+                <a href="@($"/SocialMedia/Delete?id={sm.Id}")">Delete</a>
             </TemplateColumn>
         </QuickGrid>
 

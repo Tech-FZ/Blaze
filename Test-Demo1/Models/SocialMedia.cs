@@ -5,6 +5,10 @@ namespace Test_Demo1.Models
         public string? Platform {get; set;}
 
         public string? Link {get; set;}
+        
+        public int? SelectedCompanyId {get; set;}
+
+        public int? SelectedCharacterId {get; set;}
 
         public Company? SelectedCompany {get; set;}
 

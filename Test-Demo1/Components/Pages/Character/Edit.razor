@@ -144,7 +144,6 @@ else
         Console.WriteLine($"Gender = {SelectedCharacter?.SelectedGenderId}");
         Console.WriteLine($"Company = {SelectedCharacter?.SelectedCompanyId}");
 
-        // TODO: The updates from the UI must be passed on to the actual SelectedCharacter variable.
         context.Attach(characterMapper.FromBToA(SelectedCharacter!)).State = EntityState.Modified;
 
         try
