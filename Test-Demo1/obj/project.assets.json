@@ -5801,11 +5801,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
+      "projectUniqueName": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze backup\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
       "projectName": "Test-Demo1",
-      "projectPath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
+      "projectPath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze backup\\Blaze\\Test-Demo1\\Test-Demo1.csproj",
       "packagesPath": "C:\\Users\\nlettau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze\\Test-Demo1\\obj\\",
+      "outputPath": "C:\\Users\\nlettau\\Documents\\Azubi-Treff\\Blaze backup\\Blaze\\Test-Demo1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 24.1\\Components\\Offline Packages",

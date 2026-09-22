@@ -1,4 +1,5 @@
 @page "/Character/Edit"
+@rendermode InteractiveServer
 @using Microsoft.AspNetCore.Components.QuickGrid
 @using Microsoft.EntityFrameworkCore
 @using Test_Demo1.Data
@@ -22,22 +23,21 @@ else
 {
     <div class="row">
         <div class="col-md-4">
-            <EditForm method="post" Model="SelectedCharacter" OnValidSubmit="UpdateCharacter" FormName="CharEdit"
-                      Enhance>
-                <DataAnnotationsValidator/>
-                <ValidationSummary role="alert"/>
+            <EditForm Model="SelectedCharacter" OnValidSubmit="UpdateCharacter" FormName="CharEdit">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
                 <input type="hidden" name="SelectedCharacter.Id" value="@SelectedCharacter.Id" />
 
                 <div class="mb-3">
                     <label for="name" class="form-label">Name:</label>
-                    <InputText id="name" @bind-Value="SelectedCharacter.Name" class="form-control"/>
-                    <ValidationMessage For="() => SelectedCharacter.Name" class="text-danger"/>
+                    <InputText id="name" @bind-Value="SelectedCharacter.Name" class="form-control" />
+                    <ValidationMessage For="() => SelectedCharacter.Name" class="text-danger" />
                 </div>
 
                 <div class="mb-3">
                     <label for="birthdate" class="form-label">Birth Date:</label>
-                    <InputDate id="birthdate" @bind-Value="SelectedCharacter.BirthDate" class="form-control"/>
-                    <ValidationMessage For="() => SelectedCharacter.BirthDate" class="text-danger"/>
+                    <InputDate id="birthdate" @bind-Value="SelectedCharacter.BirthDate" class="form-control" />
+                    <ValidationMessage For="() => SelectedCharacter.BirthDate" class="text-danger" />
                 </div>
 
                 <div class="mb-3">
@@ -45,12 +45,12 @@ else
 
                     <QuickGrid Class="table" Items="Genders">
                         <TemplateColumn Context="gender">
-                            <input type="radio" checked="@(SelectedCharacter.SelectedGenderId == gender.Id)"
-                                name="Gender" @onchange="@(() => SelectedCharacter.SelectedGenderId = gender.Id)" />
+                            <input type="radio" checked="@(SelectedCharacter.SelectedGenderId == gender.Id)" name="Gender"
+                                   @onchange="@(() => SelectedCharacter.SelectedGenderId = gender.Id)" />
                         </TemplateColumn>
 
-                        <PropertyColumn Property="gender => gender.ShortName" Title="Short Name" Sortable="true"/>
-                        <PropertyColumn Property="gender => gender.LongName" Title="Long Name" Sortable="true"/>
+                        <PropertyColumn Property="gender => gender.ShortName" Title="Short Name" Sortable="true" />
+                        <PropertyColumn Property="gender => gender.LongName" Title="Long Name" Sortable="true" />
                     </QuickGrid>
                 </div>
 
@@ -58,7 +58,7 @@ else
                     <label for="company" class="form-label">Company:</label>
                     
                     <InputSelect id="company" TValue="int" @bind-Value="SelectedCharacter.SelectedCompanyId"
-                        class="form-select">
+                                 class="form-select">
                         @foreach (var company in Companies)
                         {
                             <option value="@company.Id">@company.Name</option>
@@ -77,10 +77,12 @@ else
     private CharacterMapper characterMapper = default!;
 
     [SupplyParameterFromQuery]
-    private int Id {get; set;}
+    private int Id { get; set; }
 
-    [SupplyParameterFromForm]
-    private CharacterDto? SelectedCharacter {get; set;}
+    //[SupplyParameterFromForm]
+    private CharacterDto? SelectedCharacter { get; set; }
+
+    private CharacterDto? DbCharacter { get; set; }
 
     private IQueryable<Gender> Genders => context.Genders;
 
@@ -98,20 +100,45 @@ else
     {
         context = DbFactory.CreateDbContext();
         characterMapper = new CharacterMapper();
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
 
         // todo: filter by id
-        SelectedCharacter = context.Characters.AsNoTracking().Select(
+        DbCharacter = context.Characters.AsNoTracking().Select(
             c => characterMapper.FromAToB(c)).ToList()
             .FirstOrDefault(c => c.Id == Id);
 
-        if (SelectedCharacter == null)
+        if (DbCharacter == null)
         {
             NavigationManager.NotFound();
+        }
+
+        else
+        {
+            SelectedCharacter = new CharacterDto
+            {
+                Id = DbCharacter.Id,
+                BirthDate = DbCharacter.BirthDate,
+                IsStudent = DbCharacter.IsStudent,
+                Name = DbCharacter.Name,
+                SelectedCompanyId = DbCharacter.SelectedCompanyId,
+                SelectedGenderId = DbCharacter.SelectedGenderId
+            };
         }
     }
 
     private async Task UpdateCharacter()
     {
+        Console.WriteLine($"Name = {SelectedCharacter?.Name}");
+
+        Console.WriteLine($"BirthDate = {SelectedCharacter?.BirthDate}");
+
+        Console.WriteLine($"Gender = {SelectedCharacter?.SelectedGenderId}");
+        Console.WriteLine($"Company = {SelectedCharacter?.SelectedCompanyId}");
+
         // TODO: The updates from the UI must be passed on to the actual SelectedCharacter variable.
         context.Attach(characterMapper.FromBToA(SelectedCharacter!)).State = EntityState.Modified;
 
