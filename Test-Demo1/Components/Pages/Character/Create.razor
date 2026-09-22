@@ -1,0 +1,117 @@
+@page "/Character/Create"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Mappers
+@using Test_Demo1.Models
+@inject IDbContextFactory<BlazeDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Create Person - Blaze</PageTitle>
+
+<h1>Create Person</h1>
+
+<hr />
+
+@if (SelectedCharacter == null)
+{
+    <p><em>Loading Character...</em></p>
+}
+
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm Model="SelectedCharacter" OnValidSubmit="AddCharacter" FormName="CharEdit">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+                <input type="hidden" name="SelectedCharacter.Id" value="@SelectedCharacter.Id" />
+
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <InputText id="name" @bind-Value="SelectedCharacter.Name" class="form-control" />
+                    <ValidationMessage For="() => SelectedCharacter.Name" class="text-danger" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="birthdate" class="form-label">Birth Date:</label>
+                    <InputDate id="birthdate" @bind-Value="SelectedCharacter.BirthDate" class="form-control" />
+                    <ValidationMessage For="() => SelectedCharacter.BirthDate" class="text-danger" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender:</label>
+
+                    <QuickGrid Class="table" Items="Genders">
+                        <TemplateColumn Context="gender">
+                            <input type="radio" checked="@(SelectedCharacter.SelectedGenderId == gender.Id)" name="Gender"
+                                   @onchange="@(() => SelectedCharacter.SelectedGenderId = gender.Id)" />
+                        </TemplateColumn>
+
+                        <PropertyColumn Property="gender => gender.ShortName" Title="Short Name" Sortable="true" />
+                        <PropertyColumn Property="gender => gender.LongName" Title="Long Name" Sortable="true" />
+                    </QuickGrid>
+                </div>
+
+                <div class="mb-3">
+                    <label for="company" class="form-label">Company:</label>
+                    
+                    <InputSelect id="company" TValue="int" @bind-Value="SelectedCharacter.SelectedCompanyId"
+                                 class="form-select">
+                        @foreach (var company in Companies)
+                        {
+                            <option value="@company.Id">@company.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <div class="mb-3">
+                    <label for="isStudent" class="form-label">Is Student:</label>
+
+                    <InputCheckbox id="isStudent" @bind-Value="SelectedCharacter.IsStudent" class="form-checkbox"/>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@code {
+    private BlazeDbContext context = default!;
+    private CharacterMapper characterMapper = default!;
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    private CharacterDto? SelectedCharacter { get; set; } = new();
+
+    private IQueryable<Gender> Genders => context.Genders;
+
+    private IQueryable<Company> Companies
+    {
+        get
+        {
+            var companyContext = DbFactory.CreateDbContext();
+            var companies = companyContext.Companies;
+            return companies;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        context = DbFactory.CreateDbContext();
+        characterMapper = new CharacterMapper();
+    }
+
+    private async Task AddCharacter()
+    {
+        // TODO: The updates from the UI must be passed on to the actual SelectedCharacter variable.
+        context.Attach(characterMapper.FromBToA(SelectedCharacter!)).State = EntityState.Added;
+
+        await context.SaveChangesAsync();
+
+        NavigationManager.NavigateTo("/Character");
+    }
+}
