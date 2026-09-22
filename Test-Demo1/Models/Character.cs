@@ -10,8 +10,6 @@ namespace Test_Demo1.Models
 
         public int SelectedGenderId {get; set;}
 
-        public List<SocialMedia>? SocialMedias {get; set;}
-
         public Company? SelectedCompany {get; set;}
 
         public int SelectedCompanyId {get; set;}
