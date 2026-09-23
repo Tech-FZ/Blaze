@@ -1,0 +1,115 @@
+@page "/SocialMedia/Delete"
+@rendermode InteractiveServer
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Models
+@inject IDbContextFactory<BlazeDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Delete Social Media Entry - Blaze</PageTitle>
+
+<h1>Delete Social Media Entry</h1>
+
+<p>Are you sure you want to delete the following social media entry?</p>
+
+<div>
+    @if (socialMedia == null)
+    {
+        <p><em>Loading Social Media Entry...</em></p>
+    }
+
+    else
+    {
+        <dl class="row">
+            <dt class="col-sm-2">Platform</dt>
+            <dd class="col-sm-10">@socialMedia.Platform</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Link</dt>
+            <dd class="col-sm-10">@socialMedia.Link</dd>
+        </dl>
+
+        @if (socialMedia.SelectedCharacter != null)
+        {
+            <dl class="row">
+                <dt class="col-sm-2">Character Id</dt>
+                <dd class="col-sm-10">@socialMedia.SelectedCharacter.Id</dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="col-sm-2">Character Name</dt>
+                <dd class="col-sm-10">@socialMedia.SelectedCharacter.Name</dd>
+            </dl>
+        }
+
+        @if (socialMedia.SelectedCompany != null)
+        {
+            <dl class="row">
+                <dt class="col-sm-2">Character Id</dt>
+                <dd class="col-sm-10">@socialMedia.SelectedCompany.Id</dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="col-sm-2">Character Name</dt>
+                <dd class="col-sm-10">@socialMedia.SelectedCompany.Name</dd>
+            </dl>
+        }
+
+        <EditForm Model="socialMedia" OnValidSubmit="DeleteSocialMedia" FormName="delete">
+            <button type="submit" class="btn btn-danger" disabled="@(socialMedia == null)">Delete</button> |
+            <a href="/Character">Back to Character List</a>
+        </EditForm>
+    }
+</div>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
+        <strong>Error:</strong> @ErrorMessage
+    </div>
+}
+
+@code {
+    private SocialMedia? socialMedia;
+
+    private string? ErrorMessage {get; set;}
+
+    [SupplyParameterFromQuery]
+    private int Id {get; set;}
+
+    protected override void OnParametersSet()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        base.OnParametersSet();
+
+        // todo: filter by id
+        socialMedia = context.SocialMedias.Include(sm => sm.SelectedCharacter).Include(sm => sm.SelectedCompany).AsNoTracking()
+            .FirstOrDefault(c => c.Id == Id);
+
+        if (socialMedia == null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+
+    private async Task DeleteSocialMedia()
+    {
+        ErrorMessage = null;
+        var context = DbFactory.CreateDbContext();
+
+        if (socialMedia != null)
+        {
+            context.SocialMedias.Remove(socialMedia);
+            await context.SaveChangesAsync();
+            
+            if (socialMedia!.SelectedCharacterId != null)
+            {
+                NavigationManager.NavigateTo($"/Character/Details?id={socialMedia.SelectedCharacterId}");
+            }
+
+            // TODO: Company navigation
+        }
+    }
+}
