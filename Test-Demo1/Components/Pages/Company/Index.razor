@@ -1,5 +1,6 @@
 @page "/Company"
 @rendermode InteractiveServer
+@using System.Globalization
 @using Microsoft.AspNetCore.Components.QuickGrid
 @using Microsoft.EntityFrameworkCore
 @using Test_Demo1.Data
@@ -16,7 +17,7 @@
 <div>
     <QuickGrid Class="table" Items="FilteredCompanies" Pagination="pagination">
         <PropertyColumn Property="company => company.Name" Sortable="true"/>
-        <PropertyColumn Property="company => company.NetWorth" Sortable="true"/>
+        <PropertyColumn Property="company => company.NetWorth" Sortable="true" Title="Net Worth in €"/>
 
         <TemplateColumn Context="company">
             <a href="@($"/Company/Details?id={company.Id}")">Details</a> |

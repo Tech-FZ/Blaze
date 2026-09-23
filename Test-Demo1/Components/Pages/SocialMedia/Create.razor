@@ -146,6 +146,10 @@ else
             NavigationManager.NavigateTo($"/Character/Details?id={SocialMedia.SelectedCharacterId}");
         }
 
-        // TODO: Company navigation
+        // Company navigation
+        if (SocialMedia.SelectedCompanyId != null)
+        {
+            NavigationManager.NavigateTo($"/Company/Details?id={SocialMedia.SelectedCompanyId}");
+        }
     }
 }
