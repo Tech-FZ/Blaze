@@ -58,7 +58,16 @@
 
         <EditForm Model="socialMedia" OnValidSubmit="DeleteSocialMedia" FormName="delete">
             <button type="submit" class="btn btn-danger" disabled="@(socialMedia == null)">Delete</button> |
-            <a href="/Character">Back to Character List</a>
+            
+            @if (socialMedia!.SelectedCharacter != null)
+            {
+                <a href="/Character">Back to Character List</a>
+            }
+
+            else if (socialMedia!.SelectedCompany != null)
+            {
+                <a href="/Company">Back to Company List</a>
+            }
         </EditForm>
     }
 </div>
