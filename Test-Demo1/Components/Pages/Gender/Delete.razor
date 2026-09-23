@@ -1,0 +1,91 @@
+@page "/Gender/Delete"
+@rendermode InteractiveServer
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Models
+@inject IDbContextFactory<BlazeDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Delete Gender - Blaze</PageTitle>
+
+<h1>Delete Gender</h1>
+
+<p>Are you sure you want to delete the following gender?</p>
+
+<div>
+    @if (gender == null)
+    {
+        <p><em>Loading Gender...</em></p>
+    }
+
+    else
+    {
+        <dl class="row">
+            <dt class="col-sm-2">Short Name</dt>
+            <dd class="col-sm-10">@gender!.ShortName</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Long Name</dt>
+            <dd class="col-sm-10">@gender.LongName</dd>
+        </dl>
+
+        <EditForm Model="gender" OnValidSubmit="DeleteGender" FormName="delete">
+            <button type="submit" class="btn btn-danger" disabled="@(gender == null)">Delete</button> |
+            <a href="/Gender">Back to Gender List</a>
+        </EditForm>
+    }
+</div>
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
+        <strong>Error:</strong> @ErrorMessage
+    </div>
+}
+
+@code {
+    private Gender? gender;
+
+    private string? ErrorMessage {get; set;}
+
+    [SupplyParameterFromQuery]
+    private int Id {get; set;}
+
+    protected override void OnParametersSet()
+    {
+        using var context = DbFactory.CreateDbContext();
+
+        base.OnParametersSet();
+
+        // todo: filter by id
+        gender = context.Genders.AsNoTracking()
+            .FirstOrDefault(c => c.Id == Id);
+
+        if (gender == null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+
+    private async Task DeleteGender()
+    {
+        ErrorMessage = null;
+        var context = DbFactory.CreateDbContext();
+
+        if (gender != null)
+        {
+            if (context.Characters.Any(c => c.SelectedGenderId == gender.Id))
+            {
+                ErrorMessage = "This gender still has people assigned to it. Please either delete those or change their genders.";
+            }
+
+            else
+            {
+                context.Genders.Remove(gender);
+                await context.SaveChangesAsync();
+                NavigationManager.NavigateTo("/Gender");
+            }
+        }
+    }
+}
