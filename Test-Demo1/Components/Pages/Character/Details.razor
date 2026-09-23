@@ -57,7 +57,7 @@
         </QuickGrid>
 
         <EditForm Model="characterDto" FormName="delete">
-            <a href="">Add Social Media Entry</a> |
+            <a href="/SocialMedia/Create?characterId=@characterDto.Id">Add Social Media Entry</a> |
             <a href="/Character">Back to Character List</a> |
             <a href="/Character/Edit?id=@characterDto.Id">Edit Person</a> |
             <a href="/Character/Delete?id=@characterDto.Id">Delete Person</a>
@@ -81,7 +81,7 @@
         characterDto = context.Characters.Include(c => c.SelectedGender).Include(c => c.SelectedCompany)
             .FirstOrDefault(c => c.Id == Id);
 
-        socialMedias = context.SocialMedias.Include(sm => sm.SelectedCharacter).Where(sm => sm.SelectedCharacter.Id == Id);
+        socialMedias = context.SocialMedias.Include(sm => sm.SelectedCharacter).Where(sm => sm.SelectedCharacter!.Id == Id);
 
         if (characterDto == null)
         {
