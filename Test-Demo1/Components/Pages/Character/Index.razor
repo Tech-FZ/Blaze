@@ -23,8 +23,8 @@
         <PropertyColumn Property="character => character.Name" Sortable="true"/>
         <PropertyColumn Property="character => character.BirthDate" Title="Birth Date" Sortable="true"/>
         <PropertyColumn Property="character => character.IsStudent" Title="Is Student"/>
-        <PropertyColumn Property="character => character.SelectedGender.ShortName" Title="Gender" />
-        <PropertyColumn Property="character => character.SelectedCompany.Name" Title="Company" Sortable="true"/>
+        <PropertyColumn Property="character => character.SelectedGender!.ShortName" Title="Gender" />
+        <PropertyColumn Property="character => character.SelectedCompany!.Name" Title="Company" Sortable="true"/>
 
         <TemplateColumn Context="character">
             <a href="@($"Character/Details?id={character.Id}")">Details</a> |
