@@ -19,7 +19,6 @@
         <PropertyColumn Property="gender => gender.LongName" Title="Long Name" Sortable="true"/>
 
         <TemplateColumn Context="gender">
-            <a href="@($"Gender/Details?id={gender.Id}")">Details</a> |
             <a href="@($"Gender/Edit?id={gender.Id}")">Edit</a> |
             <a href="@($"Gender/Delete?id={gender.Id}")">Delete</a>
         </TemplateColumn>
