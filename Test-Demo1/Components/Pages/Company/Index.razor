@@ -19,9 +19,9 @@
         <PropertyColumn Property="company => company.NetWorth" Sortable="true"/>
 
         <TemplateColumn Context="company">
-            <a href="@($"Character/Details?id={company.Id}")">Details</a> |
-            <a href="@($"Character/Edit?id={company.Id}")">Edit</a> |
-            <a href="@($"Character/Delete?id={company.Id}")">Delete</a>
+            <a href="@($"/Company/Details?id={company.Id}")">Details</a> |
+            <a href="@($"/Company/Edit?id={company.Id}")">Edit</a> |
+            <a href="@($"/Company/Delete?id={company.Id}")">Delete</a>
         </TemplateColumn>
     </QuickGrid>
 </div>
