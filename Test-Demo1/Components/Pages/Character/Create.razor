@@ -58,7 +58,7 @@ else
                     <label for="company" class="form-label">Company:</label>
                     
                     <InputSelect id="company" TValue="int" @bind-Value="SelectedCharacter.SelectedCompanyId"
-                                 class="form-select">
+                                 class="form-select" disabled="@(CompanyId != null)">
                         @foreach (var company in Companies)
                         {
                             <option value="@company.Id">@company.Name</option>
@@ -83,7 +83,7 @@ else
     private CharacterMapper characterMapper = default!;
 
     [SupplyParameterFromQuery]
-    private int Id { get; set; }
+    private int? CompanyId { get; set; }
 
     private CharacterDto? SelectedCharacter { get; set; } = new();
 
@@ -105,6 +105,16 @@ else
         characterMapper = new CharacterMapper();
     }
 
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if (CompanyId != null)
+        {
+            SelectedCharacter!.SelectedCompanyId = (int) CompanyId;
+        }
+    }
+
     private async Task AddCharacter()
     {
         // TODO: The updates from the UI must be passed on to the actual SelectedCharacter variable.
@@ -112,6 +122,14 @@ else
 
         await context.SaveChangesAsync();
 
-        NavigationManager.NavigateTo("/Character");
+        if (CompanyId == null)
+        {
+            NavigationManager.NavigateTo("/Character");
+        }
+
+        else
+        {
+            NavigationManager.NavigateTo($"/Company/Details?id={SelectedCharacter.SelectedCompanyId}");
+        }
     }
 }
