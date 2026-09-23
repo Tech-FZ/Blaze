@@ -6,9 +6,9 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager
 
-<PageTitle>Create Person - Blaze</PageTitle>
+<PageTitle>Create Social Media Entry - Blaze</PageTitle>
 
-<h1>Create Person</h1>
+<h1>Create Social Media Entry</h1>
 
 <hr />
 
@@ -89,6 +89,9 @@ else
     [SupplyParameterFromQuery]
     private int? CharacterId {get; set;}
 
+    [SupplyParameterFromQuery]
+    private int? CompanyId {get; set;}
+
     private IQueryable<Company> Companies
     {
         get
@@ -121,6 +124,11 @@ else
         if (CharacterId != null)
         {
             SocialMedia.SelectedCharacterId = CharacterId;
+        }
+
+        if (CompanyId != null)
+        {
+            SocialMedia.SelectedCompanyId = CompanyId;
         }
     }
 

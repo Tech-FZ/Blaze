@@ -98,7 +98,11 @@ else
             NavigationManager.NavigateTo($"/Character/Details?id={SelectedSocialMedia.SelectedCharacterId}");
         }
 
-        // TODO: Company navigation
+        // Company navigation
+        if (SelectedSocialMedia!.SelectedCompanyId != null)
+        {
+            NavigationManager.NavigateTo($"/Company/Details?id={SelectedSocialMedia.SelectedCompanyId}");
+        }
     }
 
     private bool SocialMediaExists(int id)

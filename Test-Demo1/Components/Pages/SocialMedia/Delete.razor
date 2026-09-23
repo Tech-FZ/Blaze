@@ -46,12 +46,12 @@
         @if (socialMedia.SelectedCompany != null)
         {
             <dl class="row">
-                <dt class="col-sm-2">Character Id</dt>
+                <dt class="col-sm-2">Company Id</dt>
                 <dd class="col-sm-10">@socialMedia.SelectedCompany.Id</dd>
             </dl>
 
             <dl class="row">
-                <dt class="col-sm-2">Character Name</dt>
+                <dt class="col-sm-2">Company Name</dt>
                 <dd class="col-sm-10">@socialMedia.SelectedCompany.Name</dd>
             </dl>
         }
@@ -118,7 +118,10 @@
                 NavigationManager.NavigateTo($"/Character/Details?id={socialMedia.SelectedCharacterId}");
             }
 
-            // TODO: Company navigation
+            if (socialMedia!.SelectedCompanyId != null)
+            {
+                NavigationManager.NavigateTo($"/Company/Details?id={socialMedia.SelectedCompanyId}");
+            }
         }
     }
 }
