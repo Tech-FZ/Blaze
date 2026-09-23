@@ -79,6 +79,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
