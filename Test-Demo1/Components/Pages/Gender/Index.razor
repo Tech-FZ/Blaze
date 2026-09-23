@@ -11,6 +11,11 @@
 <h1>Blaze</h1>
 <h2>Genders</h2>
 <hr />
+
+<div style="margin-bottom: 10px;">
+    <input type="search" @bind="titleFilter" @bind:event="oninput" />
+</div>
+
 <p><a href="/Gender/Create">Create Gender Entry</a></p>
 
 <div>
@@ -27,10 +32,12 @@
 
 @code {
     private BlazeDbContext context = default!;
+    private string titleFilter = string.Empty;
 
     private PaginationState pagination = new PaginationState { ItemsPerPage = 5 };
 
-    private IQueryable<Gender> FilteredGenders => context.Genders;
+    private IQueryable<Gender> FilteredGenders => context.Genders
+        .Where(g => g.LongName!.Contains(titleFilter) || g.ShortName!.Contains(titleFilter));
 
     protected override void OnInitialized()
     {

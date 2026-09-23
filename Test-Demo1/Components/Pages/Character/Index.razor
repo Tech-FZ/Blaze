@@ -11,6 +11,11 @@
 <h1>Blaze</h1>
 <h2>People</h2>
 <hr />
+
+<div style="margin-bottom: 10px;">
+    <input type="search" @bind="titleFilter" @bind:event="oninput" />
+</div>
+
 <p><a href="/Character/Create">Create Person Entry</a></p>
 
 <div>
@@ -31,11 +36,13 @@
 
 @code {
     private BlazeDbContext context = default!;
+    private string titleFilter = string.Empty;
 
     private PaginationState pagination = new PaginationState { ItemsPerPage = 5 };
 
     private IQueryable<Character> FilteredCharacters => 
-        context.Characters.Include(c => c.SelectedGender).Include(c => c.SelectedCompany);
+        context.Characters.Include(c => c.SelectedGender).Include(c => c.SelectedCompany)
+            .Where(c => c.Name!.Contains(titleFilter) || c.SelectedCompany!.Name!.Contains(titleFilter));
 
     protected override void OnInitialized()
     {
