@@ -12,7 +12,7 @@
     - The APT Repository is for Debian/Ubuntu-based systems
     - The SUSE Repository is for (open)SUSE
     - Windows users may download the MySQL Installer.
-    - macOS and Arch-based users will need to download the components one by one. Sorry. :(
+    - macOS users will need to download and install the components one by one. Sorry. :(
 3. Follow the instructions of the setup (further documentation coming soon)
 
 ## Setting up the database
