@@ -1,11 +1,11 @@
 # Setting up the development environment
 
-Generally, there are three different ways to set up a development environment for .NET. One is using Visual Studio on Windows, another is using the .NET CLI. However, we're gonna use the Visual Studio Code method.
+Generally, there are three different ways to set up a development environment for .NET. One is using Visual Studio on Windows, another is using the .NET CLI. However, we're gonna use the Visual Studio Code method. Hosts are recommended to go the [easy route](serversetup.md) instead.
 
 ## Prerequisites
 
 - A Windows, macOS or Linux system.
-- A MySQL server. The setup guide is [here](mysqlsetup.md).
+- A working MySQL server. The setup guide is [here](mysqlsetup.md).
 - An existing [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) SDK install. Microsoft provides documentation on the installation of .NET for [Windows](https://learn.microsoft.com/en-us/dotnet/core/install/windows), [macOS](https://learn.microsoft.com/en-us/dotnet/core/install/macos) and [Linux](https://learn.microsoft.com/en-us/dotnet/core/install/linux).
 
 ## Installation of the programs
