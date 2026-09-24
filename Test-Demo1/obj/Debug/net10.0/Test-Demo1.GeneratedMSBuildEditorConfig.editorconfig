@@ -138,3 +138,7 @@ build_metadata.AdditionalFiles.CssScope = b-79wcpsvuuw
 [C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Layout/ReconnectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVjb25uZWN0TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3co6x98mjm
+
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Localisation/LocalisationResources.resx]
+build_metadata.AdditionalFiles.TargetPath = Localisation\LocalisationResources.resx
+build_metadata.AdditionalFiles.CssScope = 
