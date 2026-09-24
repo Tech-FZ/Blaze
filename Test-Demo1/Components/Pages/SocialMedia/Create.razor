@@ -1,0 +1,163 @@
+@page "/SocialMedia/Create"
+@rendermode InteractiveServer
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Models
+@inject IDbContextFactory<BlazeDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Create Social Media Entry - Blaze</PageTitle>
+
+<h1>Create Social Media Entry</h1>
+
+<hr />
+
+@if (SocialMedia == null)
+{
+    <p><em>Loading...</em></p>
+}
+
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm Model="SocialMedia" OnValidSubmit="AddSocialMedia" FormName="CharEdit">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+                <input type="hidden" name="SocialMedia.Id" value="@SocialMedia.Id" />
+
+                <div class="mb-3">
+                    <label for="platform" class="form-label">Platform:</label>
+                    <InputText id="platform" @bind-Value="SocialMedia.Platform" class="form-control" />
+                    <ValidationMessage For="() => SocialMedia.Platform" class="text-danger" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="link" class="form-label">Link:</label>
+                    <InputText id="link" @bind-Value="SocialMedia.Link" class="form-control" />
+                    <ValidationMessage For="() => SocialMedia.Link" class="text-danger" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="company" class="form-label">Company:</label>
+                    
+                    <InputSelect id="company" TValue="int?" @bind-Value="SocialMedia.SelectedCompanyId"
+                                 class="form-select" disabled>
+                        <option value="@(0)">No company</option>
+                        
+                        @foreach (var company in Companies)
+                        {
+                            <option value="@company.Id">@company.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <div class="mb-3">
+                    <label for="character" class="form-label">Person:</label>
+                    
+                    <InputSelect id="character" TValue="int?" @bind-Value="SocialMedia.SelectedCharacterId"
+                                 class="form-select" disabled>
+                        <option value="@(0)">No person</option>
+                        
+                        @foreach (var character in Characters)
+                        {
+                            <option value="@character.Id">@character.Name</option>
+                        }
+                    </InputSelect>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@if (!string.IsNullOrEmpty(ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
+        <strong>Error:</strong> @ErrorMessage
+    </div>
+}
+
+@code {
+    private BlazeDbContext context = default!;
+
+    private SocialMedia SocialMedia {get; set;} = new();
+
+    private string? ErrorMessage {get; set;}
+
+    [SupplyParameterFromQuery]
+    private int? CharacterId {get; set;}
+
+    [SupplyParameterFromQuery]
+    private int? CompanyId {get; set;}
+
+    private IQueryable<Company> Companies
+    {
+        get
+        {
+            var companyContext = DbFactory.CreateDbContext();
+            var companies = companyContext.Companies;
+            return companies;
+        }
+    }
+
+    private IQueryable<Character> Characters
+    {
+        get
+        {
+            var companyContext = DbFactory.CreateDbContext();
+            var characters = companyContext.Characters;
+            return characters;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        if (CharacterId != null)
+        {
+            SocialMedia.SelectedCharacterId = CharacterId;
+        }
+
+        if (CompanyId != null)
+        {
+            SocialMedia.SelectedCompanyId = CompanyId;
+        }
+    }
+
+    private async Task AddSocialMedia()
+    {
+        ErrorMessage = null;
+
+        if (SocialMedia.SelectedCompanyId == 0)
+        {
+            SocialMedia.SelectedCompanyId = null;
+        }
+
+        else if (SocialMedia.SelectedCharacterId == 0)
+        {
+            SocialMedia.SelectedCharacterId = null;
+        }
+
+        context.Entry(SocialMedia).State = EntityState.Added;
+        await context.SaveChangesAsync();
+
+        if (SocialMedia.SelectedCharacterId != null)
+        {
+            NavigationManager.NavigateTo($"/Character/Details?id={SocialMedia.SelectedCharacterId}");
+        }
+
+        // Company navigation
+        if (SocialMedia.SelectedCompanyId != null)
+        {
+            NavigationManager.NavigateTo($"/Company/Details?id={SocialMedia.SelectedCompanyId}");
+        }
+    }
+}

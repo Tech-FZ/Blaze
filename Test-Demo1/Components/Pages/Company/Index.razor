@@ -1,0 +1,50 @@
+@page "/Company"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Models
+@inject IDbContextFactory<BlazeDbContext> DbFactory;
+
+<PageTitle>Companies - Blaze</PageTitle>
+
+<h1>Blaze</h1>
+<h2>Companies</h2>
+<hr />
+
+<div style="margin-bottom: 10px;">
+    <input type="search" @bind="titleFilter" @bind:event="oninput" />
+</div>
+
+<p><a href="/Company/Create">Create Company</a></p>
+
+<div>
+    <QuickGrid Class="table" Items="FilteredCompanies" Pagination="pagination">
+        <PropertyColumn Property="company => company.Name" Sortable="true"/>
+        <PropertyColumn Property="company => company.NetWorth" Sortable="true" Title="Net Worth in €"/>
+
+        <TemplateColumn Context="company">
+            <a href="@($"/Company/Details?id={company.Id}")">Details</a> |
+            <a href="@($"/Company/Edit?id={company.Id}")">Edit</a> |
+            <a href="@($"/Company/Delete?id={company.Id}")">Delete</a>
+        </TemplateColumn>
+    </QuickGrid>
+</div>
+
+@code {
+    private BlazeDbContext context = default!;
+    private string titleFilter = string.Empty;
+
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 5 };
+
+    private IQueryable<Company> FilteredCompanies => 
+        context.Companies.Where(c => c.Name!.Contains(titleFilter));
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

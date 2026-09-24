@@ -1,0 +1,91 @@
+@page "/Character/Details"
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Models
+@rendermode InteractiveServer
+@inject IDbContextFactory<BlazeDbContext> DbFactory
+@inject NavigationManager NavigationManager;
+
+<PageTitle>Person Details - Blaze</PageTitle>
+
+<h1>Person</h1>
+<h2>Details</h2>
+<hr />
+
+<div>
+    @if (characterDto == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+
+    else
+    {
+        <dl class="row">
+            <dt class="col-sm-2">Name</dt>
+            <dd class="col-sm-10">@characterDto.Name</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Birth Date</dt>
+            <dd class="col-sm-10">@characterDto.BirthDate</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Is Student</dt>
+            <dd class="col-sm-10">@characterDto.IsStudent</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Gender</dt>
+            <dd class="col-sm-10">@characterDto.SelectedGender.LongName</dd>
+        </dl>
+
+        <dl class="row">
+            <dt class="col-sm-2">Company</dt>
+            <dd class="col-sm-10">@characterDto.SelectedCompany.Name</dd>
+        </dl>
+
+        <QuickGrid Class="table" Items="socialMedias" Pagination="pagination">
+            <PropertyColumn Property="sm => sm.Platform"/>
+            <PropertyColumn Property="sm => sm.Link"/>
+
+            <TemplateColumn Context="sm">
+                <a href="@($"/SocialMedia/Edit?id={sm.Id}")">Edit</a> |
+                <a href="@($"/SocialMedia/Delete?id={sm.Id}")">Delete</a>
+            </TemplateColumn>
+        </QuickGrid>
+
+        <EditForm Model="characterDto" FormName="delete">
+            <a href="/SocialMedia/Create?characterId=@characterDto.Id">Add Social Media Entry</a> |
+            <a href="/Character">Back to Character List</a> |
+            <a href="/Character/Edit?id=@characterDto.Id">Edit Person</a> |
+            <a href="/Character/Delete?id=@characterDto.Id">Delete Person</a>
+        </EditForm>
+    }
+</div>
+
+@code {
+    private Character? characterDto;
+    private IQueryable<SocialMedia>? socialMedias;
+
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 5 };
+
+    [SupplyParameterFromQuery]
+    private int Id {get; set;}
+
+    protected override void OnParametersSet()
+    {
+        var context = DbFactory.CreateDbContext();
+
+        characterDto = context.Characters.Include(c => c.SelectedGender).Include(c => c.SelectedCompany)
+            .FirstOrDefault(c => c.Id == Id);
+
+        socialMedias = context.SocialMedias.Include(sm => sm.SelectedCharacter).Where(sm => sm.SelectedCharacter!.Id == Id);
+
+        if (characterDto == null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+}

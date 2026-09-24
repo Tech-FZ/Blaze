@@ -1,6 +1,3 @@
-using System.Collections.ObjectModel;
-using System.Text.Json.Serialization;
-
 namespace Test_Demo1.Models
 {
     public class Character : Entity
@@ -12,8 +9,6 @@ namespace Test_Demo1.Models
         public Gender? SelectedGender {get; set;}
 
         public int SelectedGenderId {get; set;}
-
-        public ObservableCollection<SocialMedia>? SocialMedias {get; set;}
 
         public Company? SelectedCompany {get; set;}
 

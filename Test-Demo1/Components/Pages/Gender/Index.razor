@@ -1,0 +1,49 @@
+@page "/Gender/"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Models
+@inject IDbContextFactory<BlazeDbContext> DbFactory;
+
+<PageTitle>Genders - Blaze</PageTitle>
+
+<h1>Blaze</h1>
+<h2>Genders</h2>
+<hr />
+
+<div style="margin-bottom: 10px;">
+    <input type="search" @bind="titleFilter" @bind:event="oninput" />
+</div>
+
+<p><a href="/Gender/Create">Create Gender Entry</a></p>
+
+<div>
+    <QuickGrid Class="table" Items="FilteredGenders" Pagination="pagination">
+        <PropertyColumn Property="gender => gender.ShortName" Title="Short Name" Sortable="true"/>
+        <PropertyColumn Property="gender => gender.LongName" Title="Long Name" Sortable="true"/>
+
+        <TemplateColumn Context="gender">
+            <a href="@($"Gender/Edit?id={gender.Id}")">Edit</a> |
+            <a href="@($"Gender/Delete?id={gender.Id}")">Delete</a>
+        </TemplateColumn>
+    </QuickGrid>
+</div>
+
+@code {
+    private BlazeDbContext context = default!;
+    private string titleFilter = string.Empty;
+
+    private PaginationState pagination = new PaginationState { ItemsPerPage = 5 };
+
+    private IQueryable<Gender> FilteredGenders => context.Genders
+        .Where(g => g.LongName!.Contains(titleFilter) || g.ShortName!.Contains(titleFilter));
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        context = DbFactory.CreateDbContext();
+    }
+
+    public async ValueTask DisposeAsync() => await context.DisposeAsync();
+}

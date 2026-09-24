@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Test_Demo1.Data;
 using Test_Demo1.Components;
+using Microsoft.AspNetCore.Hosting.StaticWebAssets;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,13 +12,27 @@ builder.Services.AddDbContextFactory<BlazeDbContext>(
 
 builder.Services.AddQuickGridEntityFrameworkAdapter();
 
-/*
-builder.Configuration.GetConnectionString("BlazeDbContext") ?? 
-        throw new InvalidOperationException("Connection string for BlazeDbContext not found")*/
-
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Source - https://stackoverflow.com/a/75030125
+// Posted by yetanothercoder
+// Retrieved 2026-09-24, License - CC BY-SA 4.0
+
+#pragma warning disable ASP0013 // Suggest switching from using Configure methods to WebApplicationBuilder.Configuration
+builder.WebHost.ConfigureAppConfiguration((ctx, cb) =>
+    {
+        if (!ctx.HostingEnvironment.IsDevelopment())
+        {
+            StaticWebAssetsLoader.UseStaticWebAssets(
+            ctx.HostingEnvironment,
+            ctx.Configuration);
+        }
+    }
+);
+#pragma warning restore ASP0013 // Suggest switching from using Configure methods to WebApplicationBuilder.Configuration
+
 
 var app = builder.Build();
 

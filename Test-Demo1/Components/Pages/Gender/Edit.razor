@@ -1,0 +1,82 @@
+@page "/Gender/Edit"
+@rendermode InteractiveServer
+@using Microsoft.EntityFrameworkCore
+@using Test_Demo1.Data
+@using Test_Demo1.Models
+@inject IDbContextFactory<BlazeDbContext> DbFactory
+@inject NavigationManager NavigationManager
+
+<PageTitle>Edit Gender - Blaze</PageTitle>
+
+<h1>Edit Gender</h1>
+
+<hr />
+
+@if (Gender == null)
+{
+    <p><em>Loading Gender...</em></p>
+}
+
+else
+{
+    <div class="row">
+        <div class="col-md-4">
+            <EditForm Model="Gender" OnValidSubmit="UpdateGender" FormName="CharEdit">
+                <DataAnnotationsValidator />
+                <ValidationSummary role="alert" />
+                <input type="hidden" name="SelectedCharacter.Id" value="@Gender.Id" />
+
+                <div class="mb-3">
+                    <label for="shortName" class="form-label">Short Name:</label>
+                    <InputText id="shortName" @bind-Value="Gender.ShortName" class="form-control" />
+                    <ValidationMessage For="() => Gender.ShortName" class="text-danger" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="longName" class="form-label">Long Name:</label>
+                    <InputText id="longName" @bind-Value="Gender.LongName" class="form-control" />
+                    <ValidationMessage For="() => Gender.LongName" class="text-danger" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save</button>
+            </EditForm>
+        </div>
+    </div>
+}
+
+@code {
+    private BlazeDbContext context = default!;
+
+    private Gender? Gender {get; set;}
+
+    private string? ErrorMessage {get; set;}
+
+    [SupplyParameterFromQuery]
+    private int Id { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        context = DbFactory.CreateDbContext();
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        // todo: filter by id
+        Gender = context.Genders.AsNoTracking()
+            .FirstOrDefault(c => c.Id == Id);
+
+        if (Gender == null)
+        {
+            NavigationManager.NotFound();
+        }
+    }
+
+    private async Task UpdateGender()
+    {
+        context.Entry(Gender!).State = EntityState.Modified;
+        await context.SaveChangesAsync();
+        NavigationManager.NavigateTo("/Gender");
+    }
+}
