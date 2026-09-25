@@ -277,4 +277,29 @@
     <value>Reload</value>
     <comment/>
   </data>
+
+  <data name="NetWorth" xml:space="preserve">
+    <value>Net Worth in €</value>
+    <comment/>
+  </data>
+
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+    <comment/>
+  </data>
+
+  <data name="ErrorSocialMediaPerson" xml:space="preserve">
+    <value>There are still social media links attached to this person. Please delete those first.</value>
+    <comment/>
+  </data>
+
+  <data name="DeletePerson" xml:space="preserve">
+    <value>Delete Person</value>
+    <comment/>
+  </data>
+
+  <data name="AreYouSureToDeletePerson" xml:space="preserve">
+    <value>Are you sure you want to delete the following person?</value>
+    <comment/>
+  </data>
 </root>
