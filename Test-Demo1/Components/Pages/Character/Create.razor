@@ -103,6 +103,7 @@ else
     {
         context = DbFactory.CreateDbContext();
         characterMapper = new CharacterMapper();
+        SelectedCharacter!.BirthDate = new DateTime(2008, 1, 1);
     }
 
     protected override void OnParametersSet()

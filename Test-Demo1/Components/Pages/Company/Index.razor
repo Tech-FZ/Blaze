@@ -35,7 +35,7 @@
     private BlazeDbContext context = default!;
     private string titleFilter = string.Empty;
 
-    private PaginationState pagination = new PaginationState { ItemsPerPage = 5 };
+    private PaginationState pagination = new PaginationState();
 
     private IQueryable<Company> FilteredCompanies => 
         context.Companies.Where(c => c.Name!.Contains(titleFilter));
