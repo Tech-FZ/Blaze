@@ -38,12 +38,12 @@
 
         <dl class="row">
             <dt class="col-sm-2">Gender</dt>
-            <dd class="col-sm-10">@characterDto.SelectedGender.LongName</dd>
+            <dd class="col-sm-10">@characterDto.SelectedGender!.LongName</dd>
         </dl>
 
         <dl class="row">
             <dt class="col-sm-2">Company</dt>
-            <dd class="col-sm-10">@characterDto.SelectedCompany.Name</dd>
+            <dd class="col-sm-10">@characterDto.SelectedCompany!.Name</dd>
         </dl>
 
         <EditForm Model="characterDto" OnValidSubmit="DeleteCharacter" FormName="delete">
@@ -90,7 +90,7 @@
 
         if (characterDto != null)
         {
-            if (context.SocialMedias.Include(sm => sm.SelectedCharacter).Any(sm => sm.SelectedCharacter.Id == characterDto.Id))
+            if (context.SocialMedias.Include(sm => sm.SelectedCharacter).Any(sm => sm.SelectedCharacter!.Id == characterDto.Id))
             {
                 ErrorMessage = "There are still social media links attached to this person. Please delete those first.";
             }
