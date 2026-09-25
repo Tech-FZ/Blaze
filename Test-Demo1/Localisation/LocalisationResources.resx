@@ -293,6 +293,16 @@
     <comment/>
   </data>
 
+  <data name="ErrorSocialMediaCompany" xml:space="preserve">
+    <value>There are still social media links attached to this company. Please delete those first.</value>
+    <comment/>
+  </data>
+
+  <data name="ErrorEmployeeCompany" xml:space="preserve">
+    <value>This company still has employees. Please either delete those or change their companies.</value>
+    <comment/>
+  </data>
+
   <data name="DeletePerson" xml:space="preserve">
     <value>Delete Person</value>
     <comment/>
@@ -300,6 +310,106 @@
 
   <data name="AreYouSureToDeletePerson" xml:space="preserve">
     <value>Are you sure you want to delete the following person?</value>
+    <comment/>
+  </data>
+
+  <data name="EditPerson" xml:space="preserve">
+    <value>Edit Person</value>
+    <comment/>
+  </data>
+
+  <data name="CreateCompany" xml:space="preserve">
+    <value>Create Company</value>
+    <comment/>
+  </data>
+
+  <data name="DeleteCompany" xml:space="preserve">
+    <value>Delete Company</value>
+    <comment/>
+  </data>
+
+  <data name="EditCompany" xml:space="preserve">
+    <value>Edit Company</value>
+    <comment/>
+  </data>
+
+  <data name="AreYouSureToDeleteCompany" xml:space="preserve">
+    <value>Are you sure you want to delete the following company?</value>
+    <comment/>
+  </data>
+
+  <data name="BackToCompanyList" xml:space="preserve">
+    <value>Back to Company List</value>
+    <comment/>
+  </data>
+
+  <data name="BackToCompanyList" xml:space="preserve">
+    <value>Back to Company List</value>
+    <comment/>
+  </data>
+
+  <data name="AddCharacterEntry" xml:space="preserve">
+    <value>Add Character Entry</value>
+    <comment/>
+  </data>
+
+  <data name="CreateGender" xml:space="preserve">
+    <value>Create Gender</value>
+    <comment/>
+  </data>
+
+  <data name="EditGender" xml:space="preserve">
+    <value>Edit Gender</value>
+    <comment/>
+  </data>
+
+  <data name="DeleteGender" xml:space="preserve">
+    <value>Delete Gender</value>
+    <comment/>
+  </data>
+
+  <data name="AreYouSureToDeleteGender" xml:space="preserve">
+    <value>Are you sure you want to delete the following gender?</value>
+    <comment/>
+  </data>
+
+  <data name="ErrorPeopleGender" xml:space="preserve">
+    <value>This gender still has people assigned to it. Please either delete those or change their genders.</value>
+    <comment/>
+  </data>
+
+  <data name="CreateSocialMediaEntry" xml:space="preserve">
+    <value>Create Social Media Entry</value>
+    <comment/>
+  </data>
+
+  <data name="EditSocialMediaEntry" xml:space="preserve">
+    <value>Edit Social Media Entry</value>
+    <comment/>
+  </data>
+
+  <data name="DeleteSocialMediaEntry" xml:space="preserve">
+    <value>Delete Social Media Entry</value>
+    <comment/>
+  </data>
+
+  <data name="NoCompany" xml:space="preserve">
+    <value>No company</value>
+    <comment/>
+  </data>
+
+  <data name="NoPerson" xml:space="preserve">
+    <value>No person</value>
+    <comment/>
+  </data>
+
+  <data name="AreYouSureToDeleteSocialMediaEntry" xml:space="preserve">
+    <value>Are you sure you want to delete the following social media entry?</value>
+    <comment/>
+  </data>
+
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
     <comment/>
   </data>
 </root>
