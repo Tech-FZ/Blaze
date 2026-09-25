@@ -143,6 +143,18 @@ build_metadata.AdditionalFiles.CssScope = b-3co6x98mjm
 build_metadata.AdditionalFiles.TargetPath = Localisation\LocalisationResources.resx
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.resx
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Localisation/LocalisationResources.de.resx]
 build_metadata.AdditionalFiles.TargetPath = Localisation\LocalisationResources.de.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.de.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.de.resx
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.en.resx
 build_metadata.AdditionalFiles.CssScope = 
