@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="People" xml:space="preserve">
-    <value>People</value>
+    <value>Personen</value>
     <comment/>
   </data>
   <data name="CreatePersonEntry" xml:space="preserve">
-    <value>Create Person Entry</value>
+    <value>Personeneintrag erstellen</value>
     <comment/>
   </data>
   <data name="Name" xml:space="preserve">
@@ -130,19 +130,19 @@
     <comment/>
   </data>
   <data name="BirthDate" xml:space="preserve">
-    <value>Birth Date</value>
+    <value>Geburtsdatum</value>
     <comment/>
   </data>
   <data name="IsStudent" xml:space="preserve">
-    <value>Is Student</value>
+    <value>Ist Schüler</value>
     <comment/>
   </data>
   <data name="Gender" xml:space="preserve">
-    <value>Gender</value>
+    <value>Geschlecht</value>
     <comment/>
   </data>
   <data name="Company" xml:space="preserve">
-    <value>Company</value>
+    <value>Firma</value>
     <comment/>
   </data>
   <data name="Details" xml:space="preserve">
@@ -150,39 +150,39 @@
     <comment/>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Edit</value>
+    <value>Bearbeiten</value>
     <comment/>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Delete</value>
+    <value>Löschen</value>
     <comment/>
   </data>
   <data name="Genders" xml:space="preserve">
-    <value>Genders</value>
+    <value>Geschlechter</value>
     <comment/>
   </data>
   <data name="CreateGenderEntry" xml:space="preserve">
-    <value>Create Gender Entry</value>
+    <value>Geschlechtseintrag erstellen</value>
     <comment/>
   </data>
   <data name="ShortName" xml:space="preserve">
-    <value>Short Name</value>
+    <value>Kürzel</value>
     <comment/>
   </data>
   <data name="LongName" xml:space="preserve">
-    <value>Long Name</value>
+    <value>Voller Name</value>
     <comment/>
   </data>
   <data name="PersonDetails" xml:space="preserve">
-    <value>Person Details</value>
+    <value>Personendetails</value>
     <comment/>
   </data>
   <data name="Loading" xml:space="preserve">
-    <value>Loading...</value>
+    <value>Wird geladen...</value>
     <comment/>
   </data>
   <data name="Platform" xml:space="preserve">
-    <value>Platform</value>
+    <value>Plattform</value>
     <comment/>
   </data>
   <data name="Link" xml:space="preserve">
@@ -190,47 +190,47 @@
     <comment/>
   </data>
   <data name="AddSocialMediaEntry" xml:space="preserve">
-    <value>Add Social Media Entry</value>
+    <value>Eintrag für ein soziales Medium hinzufügen</value>
     <comment/>
   </data>
   <data name="BackToCharacterList" xml:space="preserve">
-    <value>Back To Character List</value>
+    <value>Zurück zur Personenliste</value>
     <comment/>
   </data>
   <data name="BlazorManagementUi" xml:space="preserve">
-    <value>A Blazor-based management UI</value>
+    <value>Eine Blazor-basierte Management-UI</value>
     <comment/>
   </data>
   <data name="WhatIsBlazor" xml:space="preserve">
-    <value>What is Blazor?</value>
+    <value>Was ist Blazor?</value>
     <comment/>
   </data>
   <data name="BlazorExplain1" xml:space="preserve">
-    <value>Blazor is a web framework for .NET, used with the C# programming language.</value>
+    <value>Blazor ist ein Web-Framework für .NET, das mit der C#-Programmiersprache genutzt wird.</value>
     <comment/>
   </data>
   <data name="BlazorExplain2" xml:space="preserve">
-    <value>This framework is part of the ASP.NET Core web library and offers a suitable alternative to PHP.</value>
+    <value>Dieses Framework ist Teil der Webbibliothek von ASP.NET Core und bietet eine geeignete Alternative zu PHP an.</value>
     <comment/>
   </data>
   <data name="BlazorExplain3" xml:space="preserve">
-    <value>The *.razor files used by this framework combine HTML markup with C# code.</value>
+    <value>Die *.razor-Dateien, die vom Framework benutzt werden, kombinieren HTML-Markup mit C#-Code.</value>
     <comment/>
   </data>
   <data name="BlazorExplain4" xml:space="preserve">
-    <value>Again, PHP uses a similar approach.</value>
+    <value>PHP nutzt, wie schon erwähnt, eine ähnliche Vorgehensweise.</value>
     <comment/>
   </data>
   <data name="BlazorExplain5" xml:space="preserve">
-    <value>While the C# code here is server-side, you can still write client-side code in JavaScript, just like you can with PHP files.</value>
+    <value>Der C#-Code ist hier serverseitig, wie bei PHP kann man allerdings auch hier clientseitigen Code mit JavaScript schreiben.</value>
     <comment/>
   </data>
   <data name="BlazorExplain6" xml:space="preserve">
-    <value>Just type in your name below and click on the button.</value>
+    <value>Bitte tippen Sie Ihren Namen ein und klicken Sie auf den Button.</value>
     <comment/>
   </data>
   <data name="BlazorExplain7" xml:space="preserve">
-    <value>That alert that will come up is the only thing I wrote in JavaScript here.</value>
+    <value>Der Alarm, der aufkommt, ist das einzige, was hier in JavaScript geschrieben ist.</value>
     <comment/>
   </data>
   <data name="ClickMe" xml:space="preserve">
@@ -238,19 +238,19 @@
     <comment/>
   </data>
   <data name="WhatDoesBlazeHave" xml:space="preserve">
-    <value>What does Blaze have?</value>
+    <value>Was hat Blaze?</value>
     <comment/>
   </data>
   <data name="BlazeComesWithFollowing" xml:space="preserve">
-    <value>Blaze comes with the following:</value>
+    <value>Blaze kommt mit folgendem:</value>
     <comment/>
   </data>
   <data name="Companies" xml:space="preserve">
-    <value>Companies</value>
+    <value>Firmen</value>
     <comment/>
   </data>
   <data name="SocialMediaLinksForPeopleAndCompanies" xml:space="preserve">
-    <value>Social Media links for People and Companies</value>
+    <value>Links zu sozialen Medien von Personen und Firmen</value>
     <comment/>
   </data>
   <data name="Home" xml:space="preserve">
@@ -258,150 +258,150 @@
     <comment/>
   </data>
   <data name="License" xml:space="preserve">
-    <value>License</value>
+    <value>Lizenz</value>
     <comment/>
   </data>
   <data name="UnhandledError" xml:space="preserve">
-    <value>An unhandled error has occured.</value>
+    <value>Ein unbehandelter Fehler ist aufgetreten.</value>
     <comment/>
   </data>
   <data name="Reload" xml:space="preserve">
-    <value>Reload</value>
+    <value>Neu laden</value>
     <comment/>
   </data>
 
   <data name="NetWorth" xml:space="preserve">
-    <value>Net Worth in €</value>
+    <value>Umsatz in €</value>
     <comment/>
   </data>
 
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Speichern</value>
     <comment/>
   </data>
 
   <data name="ErrorSocialMediaPerson" xml:space="preserve">
-    <value>There are still social media links attached to this person. Please delete those first.</value>
+    <value>Diese Person hat noch Einträge zu sozialen Medien. Bitte löschen Sie diese zuerst.</value>
     <comment/>
   </data>
 
   <data name="ErrorSocialMediaCompany" xml:space="preserve">
-    <value>There are still social media links attached to this company. Please delete those first.</value>
+    <value>Diese Firma hat noch Einträge zu sozialen Medien. Bitte löschen Sie diese zuerst.</value>
     <comment/>
   </data>
 
   <data name="ErrorEmployeeCompany" xml:space="preserve">
-    <value>This company still has employees. Please either delete those or change their companies.</value>
+    <value>Diese Firma beschäftigt noch Mitarbeiter. Bitte löschen Sie diese oder wechseln Sie deren Firma.</value>
     <comment/>
   </data>
 
   <data name="DeletePerson" xml:space="preserve">
-    <value>Delete Person</value>
+    <value>Person löschen</value>
     <comment/>
   </data>
 
   <data name="AreYouSureToDeletePerson" xml:space="preserve">
-    <value>Are you sure you want to delete the following person?</value>
+    <value>Sind Sie sicher, dass Sie folgende Person löschen wollen?</value>
     <comment/>
   </data>
 
   <data name="EditPerson" xml:space="preserve">
-    <value>Edit Person</value>
+    <value>Person bearbeiten</value>
     <comment/>
   </data>
 
   <data name="CreateCompany" xml:space="preserve">
-    <value>Create Company</value>
+    <value>Firma erstellen</value>
     <comment/>
   </data>
 
   <data name="DeleteCompany" xml:space="preserve">
-    <value>Delete Company</value>
+    <value>Firma löschen</value>
     <comment/>
   </data>
 
   <data name="EditCompany" xml:space="preserve">
-    <value>Edit Company</value>
+    <value>Firma bearbeiten</value>
     <comment/>
   </data>
 
   <data name="AreYouSureToDeleteCompany" xml:space="preserve">
-    <value>Are you sure you want to delete the following company?</value>
+    <value>Sind Sie sicher, dass Sie folgende Firma löschen wollen?</value>
     <comment/>
   </data>
 
   <data name="BackToCompanyList" xml:space="preserve">
-    <value>Back to Company List</value>
+    <value>Zurück zur Firmenliste</value>
     <comment/>
   </data>
 
   <data name="BackToGenderList" xml:space="preserve">
-    <value>Back to Gender List</value>
+    <value>Zurück zur Geschlechterliste</value>
     <comment/>
   </data>
 
   <data name="AddCharacterEntry" xml:space="preserve">
-    <value>Add Character Entry</value>
+    <value>Personeneintrag erstellen</value>
     <comment/>
   </data>
 
   <data name="CreateGender" xml:space="preserve">
-    <value>Create Gender</value>
+    <value>Geschlecht erstellen</value>
     <comment/>
   </data>
 
   <data name="EditGender" xml:space="preserve">
-    <value>Edit Gender</value>
+    <value>Geschlecht bearbeiten</value>
     <comment/>
   </data>
 
   <data name="DeleteGender" xml:space="preserve">
-    <value>Delete Gender</value>
+    <value>Geschlecht löschen</value>
     <comment/>
   </data>
 
   <data name="AreYouSureToDeleteGender" xml:space="preserve">
-    <value>Are you sure you want to delete the following gender?</value>
+    <value>Sind Sie sicher, dass Sie folgendes Geschlecht löschen wollen?</value>
     <comment/>
   </data>
 
   <data name="ErrorPeopleGender" xml:space="preserve">
-    <value>This gender still has people assigned to it. Please either delete those or change their genders.</value>
+    <value>Laut der Datenbank identifizieren sich noch Personen mit diesem Geschlecht. Bitte löschen Sie diese oder wechseln Sie dessen Geschlecht aus.</value>
     <comment/>
   </data>
 
   <data name="CreateSocialMediaEntry" xml:space="preserve">
-    <value>Create Social Media Entry</value>
+    <value>Eintrag für ein soziales Medium erstellen</value>
     <comment/>
   </data>
 
   <data name="EditSocialMediaEntry" xml:space="preserve">
-    <value>Edit Social Media Entry</value>
+    <value>Eintrag für ein soziales Medium bearbeiten</value>
     <comment/>
   </data>
 
   <data name="DeleteSocialMediaEntry" xml:space="preserve">
-    <value>Delete Social Media Entry</value>
+    <value>Eintrag für ein soziales Medium löschen</value>
     <comment/>
   </data>
 
   <data name="NoCompany" xml:space="preserve">
-    <value>No company</value>
+    <value>Keine Firma</value>
     <comment/>
   </data>
 
   <data name="NoPerson" xml:space="preserve">
-    <value>No person</value>
+    <value>Keine Person</value>
     <comment/>
   </data>
 
   <data name="AreYouSureToDeleteSocialMediaEntry" xml:space="preserve">
-    <value>Are you sure you want to delete the following social media entry?</value>
+    <value>Sind Sie sicher, dass Sie diesen Eintrag löschen wollen?</value>
     <comment/>
   </data>
 
   <data name="Error" xml:space="preserve">
-    <value>Error</value>
+    <value>Fehler</value>
     <comment/>
   </data>
 </root>
