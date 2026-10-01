@@ -6,30 +6,30 @@
 @using Test_Demo1.Models
 @inject IDbContextFactory<BlazeDbContext> DbFactory;
 
-<PageTitle>Personen - Blaze</PageTitle>
+<PageTitle>People - Blaze</PageTitle>
 
 <h1>Blaze</h1>
-<h2>Personen</h2>
+<h2>People</h2>
 <hr />
 
 <div style="margin-bottom: 10px;">
     <input type="search" @bind="titleFilter" @bind:event="oninput" />
 </div>
 
-<p><a href="/Character/Create">Personeneintrag erstellen</a></p>
+<p><a href="/Character/Create">Create Person Entry</a></p>
 
 <div>
     <QuickGrid Class="table" Items="FilteredCharacters" Pagination="pagination">
         <PropertyColumn Property="character => character.Name" Sortable="true"/>
-        <PropertyColumn Property="character => character.BirthDate" Title="Geburtsdatum" Sortable="true"/>
-        <PropertyColumn Property="character => character.IsStudent" Title="Ist Schüler"/>
-        <PropertyColumn Property="character => character.SelectedGender!.ShortName" Title="Geschlecht" />
-        <PropertyColumn Property="character => character.SelectedCompany!.Name" Title="Unternehmen" Sortable="true"/>
+        <PropertyColumn Property="character => character.BirthDate" Title="Birth Date" Sortable="true"/>
+        <PropertyColumn Property="character => character.IsStudent" Title="Is Student"/>
+        <PropertyColumn Property="character => character.SelectedGender!.ShortName" Title="Gender" />
+        <PropertyColumn Property="character => character.SelectedCompany!.Name" Title="Company" Sortable="true"/>
 
         <TemplateColumn Context="character">
             <a href="@($"Character/Details?id={character.Id}")">Details</a> |
-            <a href="@($"Character/Edit?id={character.Id}")">Bearbeiten</a> |
-            <a href="@($"Character/Delete?id={character.Id}")">Löschen</a>
+            <a href="@($"Character/Edit?id={character.Id}")">Edit</a> |
+            <a href="@($"Character/Delete?id={character.Id}")">Delete</a>
         </TemplateColumn>
     </QuickGrid>
 </div>

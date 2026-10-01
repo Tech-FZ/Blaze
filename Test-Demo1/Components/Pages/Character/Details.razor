@@ -7,7 +7,7 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager;
 
-<PageTitle>Personendetails - Blaze</PageTitle>
+<PageTitle>Person Details - Blaze</PageTitle>
 
 <h1>Person</h1>
 <h2>Details</h2>
@@ -16,7 +16,7 @@
 <div>
     @if (characterDto == null)
     {
-        <p><em>Bitte warten...</em></p>
+        <p><em>Loading...</em></p>
     }
 
     else
@@ -27,22 +27,22 @@
         </dl>
 
         <dl class="row">
-            <dt class="col-sm-2">Geburtsdatum</dt>
+            <dt class="col-sm-2">Birth Date</dt>
             <dd class="col-sm-10">@characterDto.BirthDate</dd>
         </dl>
 
         <dl class="row">
-            <dt class="col-sm-2">Ist Schüler</dt>
+            <dt class="col-sm-2">Is Student</dt>
             <dd class="col-sm-10">@characterDto.IsStudent</dd>
         </dl>
 
         <dl class="row">
-            <dt class="col-sm-2">Geschlecht</dt>
+            <dt class="col-sm-2">Gender</dt>
             <dd class="col-sm-10">@characterDto.SelectedGender.LongName</dd>
         </dl>
 
         <dl class="row">
-            <dt class="col-sm-2">Unternehmen</dt>
+            <dt class="col-sm-2">Company</dt>
             <dd class="col-sm-10">@characterDto.SelectedCompany.Name</dd>
         </dl>
 
@@ -51,16 +51,16 @@
             <PropertyColumn Property="sm => sm.Link"/>
 
             <TemplateColumn Context="sm">
-                <a href="@($"/SocialMedia/Edit?id={sm.Id}")">Bearbeiten</a> |
-                <a href="@($"/SocialMedia/Delete?id={sm.Id}")">Löschen</a>
+                <a href="@($"/SocialMedia/Edit?id={sm.Id}")">Edit</a> |
+                <a href="@($"/SocialMedia/Delete?id={sm.Id}")">Delete</a>
             </TemplateColumn>
         </QuickGrid>
 
         <EditForm Model="characterDto" FormName="delete">
-            <a href="/SocialMedia/Create?characterId=@characterDto.Id">Eintrag für ein soziales Medium erstellen</a> |
-            <a href="/Character">Zurück zur Personenliste</a> |
-            <a href="/Character/Edit?id=@characterDto.Id">Person bearbeiten</a> |
-            <a href="/Character/Delete?id=@characterDto.Id">Person löschen</a>
+            <a href="/SocialMedia/Create?characterId=@characterDto.Id">Add Social Media Entry</a> |
+            <a href="/Character">Back to Character List</a> |
+            <a href="/Character/Edit?id=@characterDto.Id">Edit Person</a> |
+            <a href="/Character/Delete?id=@characterDto.Id">Delete Person</a>
         </EditForm>
     }
 </div>

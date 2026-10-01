@@ -6,33 +6,33 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager
 
-<PageTitle>Geschlecht löschen - Blaze</PageTitle>
+<PageTitle>Delete Gender - Blaze</PageTitle>
 
-<h1>Geschlecht löschen</h1>
+<h1>Delete Gender</h1>
 
-<p>Sind Sie sicher, dass Sie folgendes Geschlecht löschen wollen?</p>
+<p>Are you sure you want to delete the following gender?</p>
 
 <div>
     @if (gender == null)
     {
-        <p><em>Bitte warten...</em></p>
+        <p><em>Loading Gender...</em></p>
     }
 
     else
     {
         <dl class="row">
-            <dt class="col-sm-2">Kurzname</dt>
+            <dt class="col-sm-2">Short Name</dt>
             <dd class="col-sm-10">@gender!.ShortName</dd>
         </dl>
 
         <dl class="row">
-            <dt class="col-sm-2">Langer Name</dt>
+            <dt class="col-sm-2">Long Name</dt>
             <dd class="col-sm-10">@gender.LongName</dd>
         </dl>
 
         <EditForm Model="gender" OnValidSubmit="DeleteGender" FormName="delete">
-            <button type="submit" class="btn btn-danger" disabled="@(gender == null)">Löschen</button> |
-            <a href="/Gender">Zurück zur Geschlechterliste</a>
+            <button type="submit" class="btn btn-danger" disabled="@(gender == null)">Delete</button> |
+            <a href="/Gender">Back to Gender List</a>
         </EditForm>
     }
 </div>
@@ -77,8 +77,7 @@
         {
             if (context.Characters.Any(c => c.SelectedGenderId == gender.Id))
             {
-                ErrorMessage = 
-                    "Laut der Datenbank identifizieren sich noch Personen mit diesem Geschlecht. Bitte löschen Sie diese oder wechseln Sie dessen Geschlecht aus.";
+                ErrorMessage = "This gender still has people assigned to it. Please either delete those or change their genders.";
             }
 
             else

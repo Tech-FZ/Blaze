@@ -6,15 +6,15 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager
 
-<PageTitle>Eintrag für ein soziales Medium bearbeiten - Blaze</PageTitle>
+<PageTitle>Edit Social Media Entry - Blaze</PageTitle>
 
-<h1>Eintrag für ein soziales Medium bearbeiten</h1>
+<h1>Edit Social Media Entry</h1>
 
 <hr />
 
 @if (SelectedSocialMedia == null)
 {
-    <p><em>Bitte warten...</em></p>
+    <p><em>Loading Social Media Entry...</em></p>
 }
 
 else
@@ -27,7 +27,7 @@ else
                 <input type="hidden" name="SelectedSocialMedia.Id" value="@SelectedSocialMedia.Id" />
 
                 <div class="mb-3">
-                    <label for="platform" class="form-label">Plattform:</label>
+                    <label for="platform" class="form-label">Platform:</label>
                     <InputText id="platform" @bind-Value="SelectedSocialMedia.Platform" class="form-control" />
                     <ValidationMessage For="() => SelectedSocialMedia.Platform" class="text-danger" />
                 </div>
@@ -38,7 +38,7 @@ else
                     <ValidationMessage For="() => SelectedSocialMedia.Link" class="text-danger" />
                 </div>
 
-                <button type="submit" class="btn btn-primary">Speichern</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </EditForm>
         </div>
     </div>

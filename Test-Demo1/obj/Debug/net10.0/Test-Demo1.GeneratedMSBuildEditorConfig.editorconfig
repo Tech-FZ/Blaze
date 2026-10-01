@@ -20,141 +20,141 @@ build_property.TargetFrameworkVersion = v10.0
 build_property.EntryPointFilePath = 
 build_property.RootNamespace = Test_Demo1
 build_property.RootNamespace = Test_Demo1
-build_property.ProjectDir = C:\Users\nlettau\Documents\Azubi-Treff\Blaze german\Blaze\Test-Demo1\
+build_property.ProjectDir = C:\Users\nlettau\Documents\Azubi-Treff\Blaze backup\Blaze\Test-Demo1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\nlettau\Documents\Azubi-Treff\Blaze german\Blaze\Test-Demo1
+build_property.MSBuildProjectDirectory = C:\Users\nlettau\Documents\Azubi-Treff\Blaze backup\Blaze\Test-Demo1
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/App.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Character/Create.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Create.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Character/Delete.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Delete.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcRGVsZXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Character/Details.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Details.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcRGV0YWlscy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Character/Edit.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Edit.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Character/Index.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Company/Create.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Create.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XENyZWF0ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Company/Delete.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Delete.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XERlbGV0ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Company/Details.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Details.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XERldGFpbHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Company/Edit.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Edit.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XEVkaXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Company/Index.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XEluZGV4LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Error.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Gender/Create.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Create.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Gender/Delete.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Delete.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcRGVsZXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Gender/Edit.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Edit.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Gender/Index.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/Home.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/License.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/License.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMaWNlbnNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/NotFound.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOb3RGb3VuZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/SocialMedia/Create.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/SocialMedia/Create.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2NpYWxNZWRpYVxDcmVhdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/SocialMedia/Delete.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/SocialMedia/Delete.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2NpYWxNZWRpYVxEZWxldGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Pages/SocialMedia/Edit.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/SocialMedia/Edit.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2NpYWxNZWRpYVxFZGl0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Routes.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/_Imports.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Layout/MainLayout.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-mz3s9fu4ps
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Layout/NavMenu.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-79wcpsvuuw
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Components/Layout/ReconnectModal.razor]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Layout/ReconnectModal.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVjb25uZWN0TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3co6x98mjm
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Localisation/LocalisationResources.resx]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Localisation/LocalisationResources.resx]
 build_metadata.AdditionalFiles.TargetPath = Localisation\LocalisationResources.resx
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Resources/LocalisationResources.resx]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.resx]
 build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.resx
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Localisation/LocalisationResources.de.resx]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Localisation/LocalisationResources.de.resx]
 build_metadata.AdditionalFiles.TargetPath = Localisation\LocalisationResources.de.resx
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Resources/LocalisationResources.de.resx]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.de.resx]
 build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.de.resx
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze german/Blaze/Test-Demo1/Resources/LocalisationResources.en.resx]
+[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.en.resx]
 build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.en.resx
 build_metadata.AdditionalFiles.CssScope = 

@@ -8,15 +8,15 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager
 
-<PageTitle>Person erstellen - Blaze</PageTitle>
+<PageTitle>Create Person - Blaze</PageTitle>
 
-<h1>Person erstellen</h1>
+<h1>Create Person</h1>
 
 <hr />
 
 @if (SelectedCharacter == null)
 {
-    <p><em>Bitte warten...</em></p>
+    <p><em>Loading Character...</em></p>
 }
 
 else
@@ -35,13 +35,13 @@ else
                 </div>
 
                 <div class="mb-3">
-                    <label for="birthdate" class="form-label">Geburtsdatum:</label>
+                    <label for="birthdate" class="form-label">Birth Date:</label>
                     <InputDate id="birthdate" @bind-Value="SelectedCharacter.BirthDate" class="form-control" />
                     <ValidationMessage For="() => SelectedCharacter.BirthDate" class="text-danger" />
                 </div>
 
                 <div class="mb-3">
-                    <label for="gender" class="form-label">Geschlecht:</label>
+                    <label for="gender" class="form-label">Gender:</label>
 
                     <QuickGrid Class="table" Items="Genders">
                         <TemplateColumn Context="gender">
@@ -49,13 +49,13 @@ else
                                    @onchange="@(() => SelectedCharacter.SelectedGenderId = gender.Id)" />
                         </TemplateColumn>
 
-                        <PropertyColumn Property="gender => gender.ShortName" Title="Kurzname" Sortable="true" />
-                        <PropertyColumn Property="gender => gender.LongName" Title="Langer Name" Sortable="true" />
+                        <PropertyColumn Property="gender => gender.ShortName" Title="Short Name" Sortable="true" />
+                        <PropertyColumn Property="gender => gender.LongName" Title="Long Name" Sortable="true" />
                     </QuickGrid>
                 </div>
 
                 <div class="mb-3">
-                    <label for="company" class="form-label">Unternehmen:</label>
+                    <label for="company" class="form-label">Company:</label>
                     
                     <InputSelect id="company" TValue="int" @bind-Value="SelectedCharacter.SelectedCompanyId"
                                  class="form-select" disabled="@(CompanyId != null)">
@@ -67,12 +67,12 @@ else
                 </div>
 
                 <div class="mb-3">
-                    <label for="isStudent" class="form-label">Ist Schüler:</label>
+                    <label for="isStudent" class="form-label">Is Student:</label>
 
                     <InputCheckbox id="isStudent" @bind-Value="SelectedCharacter.IsStudent" class="form-checkbox"/>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Speichern</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </EditForm>
         </div>
     </div>
