@@ -1,24 +1,26 @@
-# Setup MySQL
+# MySQL aufsetzen
 
-## Prerequisites
+Die externen Links sind auf Englisch.
 
-- A Windows, macOS or Linux installation
+## Anforderungen
+
+- Eine Windows-, macOS- or Linux-Installation
 
 ## Installation
 
-1. Go to the [MySQL Community](https://dev.mysql.com/downloads/) download page.
-2. Choose the respective download for your system.
-    - The Yum Repository is for RHEL/Fedora/Oracle-based Linux distros
-    - The APT Repository is for Debian/Ubuntu-based systems
-    - The SUSE Repository is for (open)SUSE
-    - Windows users may download the MySQL Installer.
-    - macOS users will need to download and install the components one by one. Sorry. :(
-3. Follow the instructions of the setup (further documentation coming soon)
+1. Besuchen Sie die [MySQL Community](https://dev.mysql.com/downloads/)-Downloadseite.
+2. Suchen Sie sich den Download für Ihr System aus.
+    - Die Yum-Repository ist für RHEL/Fedora/Oracle-basierte Linux-Distributionen
+    - Die APT-Repository ist für Debian/Ubuntu-basierte Systeme
+    - Die SUSE-Repository ist für (open)SUSE
+    - Windows-Nutzer können den MySQL Installer herunterladen.
+    - macOS-Benutzer müssen die Komponenten einzeln herunterladen und installieren. Sorry. :(
+3. Befolgen Sie die Setup-Schritte (mehr Dokumentation folgt)
 
-## Setting up the database
+## Datenbank aufsetzen
 
-1. Open the MySQL Workbench
-2. Connect to the server you want to use.
-3. Go to `sqlScripts/SetupDatabase.sql` and copy its contents to the query.
-    - I encourage you to read and understand the query before executing it.
-4. Run the query.
+1. Öffnen Sie die MySQL Workbench
+2. Verbinden Sie sich mit dem zu benutzenden Server.
+3. Gehen Sie zu `sqlScripts/SetupDatabase.sql` im Code und kopieren Sie dessen Inhalt in den Query.
+    - Ich empfehle Ihnen, die Query zu lesen und zu verstehen, bevor Sie diesen ausführen.
+4. Führen Sie diese Query aus.

@@ -1,18 +1,18 @@
-# Setting up a Blaze server
+# Blaze-Server aufsetzen
 
-While developers can [set up a development environment](devsetup.md), for those who just want to host Blaze on their machines, it isn't too nice.
+Während Entwickler [eine Entwicklungsumgebung aufsetzen](devsetup.md) können, ist es nicht so gut, dies zu tun, wenn man nur auf seinem System Blaze hosten möchte. Die externen Links sind alle auf Englisch.
 
-## Prerequisites
+## Anforderungen
 
-- A Windows, macOS or Linux system.
-- A working MySQL server. The setup guide is [here](mysqlsetup.md).
-- An existing [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) ASP.NET Core Runtime install. Microsoft provides documentation on the installation of .NET for [Windows](https://learn.microsoft.com/en-us/dotnet/core/install/windows), [macOS](https://learn.microsoft.com/en-us/dotnet/core/install/macos) and [Linux](https://learn.microsoft.com/en-us/dotnet/core/install/linux).
-- A text editor
+- Ein System mit Windows, macOS oder Linux.
+- Ein funktionierender MySQL-Server. Die Setup-Anleitung ist [hier](mysqlsetup.md).
+- Eine existierende Installation der [.NET 10](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) ASP.NET Core Runtime. Microsoft stellt Dokumentationen über die Installation von .NET unter [Windows](https://learn.microsoft.com/en-us/dotnet/core/install/windows), [macOS](https://learn.microsoft.com/en-us/dotnet/core/install/macos) und [Linux](https://learn.microsoft.com/en-us/dotnet/core/install/linux) bereit.
+- Ein Text-Editor
 
-## Installation of the program
+## Installation des Programms
 
-1. Go to the [Blaze Releases](https://github.com/Tech-FZ/Blaze/releases) and download the latest version.
-2. Unzip the ZIP file.
-3. Open the `appsettings.json` file.
-4. Type in `"ConnectionStrings:BlazeDbContext": "server=(insert-server-here);database=blazedb;user=(insert-user-here);password=(insert-password-here)"` within the first layer of `{}`. Replace the (insert-x-here) variables with your actual server connection information. Leave the password parameter out if there is no password.
-5. Run `Test-Demo1`. If everything works correctly, you can open a web browser and access `localhost:5000` (or whatever the terminal puts out as an address).
+1. Besuchen Sie die [Blaze Releases](https://github.com/Tech-FZ/Blaze/releases) und laden Sie die neueste Version herunter.
+2. Entpacken Sie die ZIP-Datei.
+3. Öffnen Sie die `appsettings.json`-Datei.
+4. Tippen Sie `"ConnectionStrings:BlazeDbContext": "server=(insert-server-here);database=blazedb;user=(insert-user-here);password=(insert-password-here)"` innerhalb der ersten `{}`-Ebene ein. Ersetzen Sie die (insert-x-here)-Variablen durch Ihre eigentlichen Serververbindungsinformationen. Wenn kein Passwort vergeben ist, lassen Sie den password-Parameter weg.
+5. Führen Sie `Test-Demo1` aus. Wenn alles korrekt funktioniert, können Sie über einen Webbrowser `localhost:5000` (oder was auch immer der Terminal ausgibt) aufrufen.
