@@ -6,22 +6,22 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager
 
-<PageTitle>Delete Social Media Entry - Blaze</PageTitle>
+<PageTitle>Eintrag für ein soziales Medium löschen - Blaze</PageTitle>
 
-<h1>Delete Social Media Entry</h1>
+<h1>Eintrag für ein soziales Medium löschen</h1>
 
-<p>Are you sure you want to delete the following social media entry?</p>
+<p>Sind Sie sicher, dass Sie diesen Eintrag löschen wollen?</p>
 
 <div>
     @if (socialMedia == null)
     {
-        <p><em>Loading Social Media Entry...</em></p>
+        <p><em>Bitte warten...</em></p>
     }
 
     else
     {
         <dl class="row">
-            <dt class="col-sm-2">Platform</dt>
+            <dt class="col-sm-2">Plattform</dt>
             <dd class="col-sm-10">@socialMedia.Platform</dd>
         </dl>
 
@@ -33,12 +33,12 @@
         @if (socialMedia.SelectedCharacter != null)
         {
             <dl class="row">
-                <dt class="col-sm-2">Character Id</dt>
+                <dt class="col-sm-2">Personen-ID</dt>
                 <dd class="col-sm-10">@socialMedia.SelectedCharacter.Id</dd>
             </dl>
 
             <dl class="row">
-                <dt class="col-sm-2">Character Name</dt>
+                <dt class="col-sm-2">Personenname</dt>
                 <dd class="col-sm-10">@socialMedia.SelectedCharacter.Name</dd>
             </dl>
         }
@@ -46,27 +46,27 @@
         @if (socialMedia.SelectedCompany != null)
         {
             <dl class="row">
-                <dt class="col-sm-2">Company Id</dt>
+                <dt class="col-sm-2">Firmen-ID</dt>
                 <dd class="col-sm-10">@socialMedia.SelectedCompany.Id</dd>
             </dl>
 
             <dl class="row">
-                <dt class="col-sm-2">Company Name</dt>
+                <dt class="col-sm-2">Firmenname</dt>
                 <dd class="col-sm-10">@socialMedia.SelectedCompany.Name</dd>
             </dl>
         }
 
         <EditForm Model="socialMedia" OnValidSubmit="DeleteSocialMedia" FormName="delete">
-            <button type="submit" class="btn btn-danger" disabled="@(socialMedia == null)">Delete</button> |
+            <button type="submit" class="btn btn-danger" disabled="@(socialMedia == null)">Löschen</button> |
             
             @if (socialMedia!.SelectedCharacter != null)
             {
-                <a href="/Character">Back to Character List</a>
+                <a href="/Character">Zurück zur Personenliste</a>
             }
 
             else if (socialMedia!.SelectedCompany != null)
             {
-                <a href="/Company">Back to Company List</a>
+                <a href="/Company">Zurück zur Unternehmensliste</a>
             }
         </EditForm>
     }
@@ -75,7 +75,7 @@
 @if (!string.IsNullOrEmpty(ErrorMessage))
 {
     <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
-        <strong>Error:</strong> @ErrorMessage
+        <strong>Fehler:</strong> @ErrorMessage
     </div>
 }
 

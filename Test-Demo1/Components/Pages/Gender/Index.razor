@@ -6,26 +6,26 @@
 @using Test_Demo1.Models
 @inject IDbContextFactory<BlazeDbContext> DbFactory;
 
-<PageTitle>Genders - Blaze</PageTitle>
+<PageTitle>Geschlechter - Blaze</PageTitle>
 
 <h1>Blaze</h1>
-<h2>Genders</h2>
+<h2>Geschlechter</h2>
 <hr />
 
 <div style="margin-bottom: 10px;">
     <input type="search" @bind="titleFilter" @bind:event="oninput" />
 </div>
 
-<p><a href="/Gender/Create">Create Gender Entry</a></p>
+<p><a href="/Gender/Create">Geschlechtseintrag erstellen</a></p>
 
 <div>
     <QuickGrid Class="table" Items="FilteredGenders" Pagination="pagination">
-        <PropertyColumn Property="gender => gender.ShortName" Title="Short Name" Sortable="true"/>
-        <PropertyColumn Property="gender => gender.LongName" Title="Long Name" Sortable="true"/>
+        <PropertyColumn Property="gender => gender.ShortName" Title="Kurzname" Sortable="true"/>
+        <PropertyColumn Property="gender => gender.LongName" Title="Langer Name" Sortable="true"/>
 
         <TemplateColumn Context="gender">
-            <a href="@($"Gender/Edit?id={gender.Id}")">Edit</a> |
-            <a href="@($"Gender/Delete?id={gender.Id}")">Delete</a>
+            <a href="@($"Gender/Edit?id={gender.Id}")">Bearbeiten</a> |
+            <a href="@($"Gender/Delete?id={gender.Id}")">Löschen</a>
         </TemplateColumn>
     </QuickGrid>
 </div>

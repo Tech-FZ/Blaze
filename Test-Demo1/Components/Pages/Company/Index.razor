@@ -6,17 +6,17 @@
 @using Test_Demo1.Models
 @inject IDbContextFactory<BlazeDbContext> DbFactory;
 
-<PageTitle>Companies - Blaze</PageTitle>
+<PageTitle>Unternehmen - Blaze</PageTitle>
 
 <h1>Blaze</h1>
-<h2>Companies</h2>
+<h2>Unternehmen</h2>
 <hr />
 
 <div style="margin-bottom: 10px;">
     <input type="search" @bind="titleFilter" @bind:event="oninput" />
 </div>
 
-<p><a href="/Company/Create">Create Company</a></p>
+<p><a href="/Company/Create">Unternehmen erstellen</a></p>
 
 <div>
     <QuickGrid Class="table" Items="FilteredCompanies" Pagination="pagination">
@@ -25,8 +25,8 @@
 
         <TemplateColumn Context="company">
             <a href="@($"/Company/Details?id={company.Id}")">Details</a> |
-            <a href="@($"/Company/Edit?id={company.Id}")">Edit</a> |
-            <a href="@($"/Company/Delete?id={company.Id}")">Delete</a>
+            <a href="@($"/Company/Edit?id={company.Id}")">Bearbeiten</a> |
+            <a href="@($"/Company/Delete?id={company.Id}")">Löschen</a>
         </TemplateColumn>
     </QuickGrid>
 </div>

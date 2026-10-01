@@ -7,16 +7,16 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager;
 
-<PageTitle>Company Details - Blaze</PageTitle>
+<PageTitle>Unternehmensdetails - Blaze</PageTitle>
 
-<h1>Company</h1>
+<h1>Unternehmen</h1>
 <h2>Details</h2>
 <hr />
 
 <div>
     @if (company == null)
     {
-        <p><em>Loading Company Details...</em></p>
+        <p><em>Bitte warten...</em></p>
     }
 
     else
@@ -27,20 +27,20 @@
         </dl>
 
         <dl class="row">
-            <dt class="col-sm-2">Net Worth</dt>
+            <dt class="col-sm-2">Vermögen</dt>
             <dd class="col-sm-10">@company.NetWorth €</dd>
         </dl>
 
         <QuickGrid Class="table" Items="employees" Pagination="pagination">
             <PropertyColumn Property="character => character.Name" Sortable="true"/>
-            <PropertyColumn Property="character => character.BirthDate" Title="Birth Date" Sortable="true"/>
-            <PropertyColumn Property="character => character.IsStudent" Title="Is Student"/>
-            <PropertyColumn Property="character => character.SelectedGender!.ShortName" Title="Gender" />
+            <PropertyColumn Property="character => character.BirthDate" Title="Geburtsdatum" Sortable="true"/>
+            <PropertyColumn Property="character => character.IsStudent" Title="Ist Schüler"/>
+            <PropertyColumn Property="character => character.SelectedGender!.ShortName" Title="Geschlecht" />
 
             <TemplateColumn Context="character">
                 <a href="@($"Character/Details?id={character.Id}")">Details</a> |
-                <a href="@($"Character/Edit?id={character.Id}")">Edit</a> |
-                <a href="@($"Character/Delete?id={character.Id}")">Delete</a>
+                <a href="@($"Character/Edit?id={character.Id}")">Bearbeiten</a> |
+                <a href="@($"Character/Delete?id={character.Id}")">Löschen</a>
             </TemplateColumn>
         </QuickGrid>
         
@@ -49,17 +49,17 @@
             <PropertyColumn Property="sm => sm.Link"/>
 
             <TemplateColumn Context="sm">
-                <a href="@($"/SocialMedia/Edit?id={sm.Id}")">Edit</a> |
-                <a href="@($"/SocialMedia/Delete?id={sm.Id}")">Delete</a>
+                <a href="@($"/SocialMedia/Edit?id={sm.Id}")">Bearbeiten</a> |
+                <a href="@($"/SocialMedia/Delete?id={sm.Id}")">Löschen</a>
             </TemplateColumn>
         </QuickGrid>
 
         <EditForm Model="company" FormName="delete">
-            <a href="/SocialMedia/Create?companyId=@company!.Id">Add Social Media Entry</a> |
-            <a href="/Character/Create?companyId=@company!.Id">Add Character Entry</a> |
-            <a href="/Company">Back to Company List</a> |
-            <a href="/Company/Edit?id=@company!.Id">Edit Company</a> |
-            <a href="/Company/Delete?id=@company!.Id">Delete Company</a>
+            <a href="/SocialMedia/Create?companyId=@company!.Id">Eintrag für ein soziales Medium erstellen</a> |
+            <a href="/Character/Create?companyId=@company!.Id">Personeneintrag erstellen</a> |
+            <a href="/Company">Zurück zur Unternehmensliste</a> |
+            <a href="/Company/Edit?id=@company!.Id">Unternehmen bearbeiten</a> |
+            <a href="/Company/Delete?id=@company!.Id">Unternehmen löschen</a>
         </EditForm>
     }
 </div>

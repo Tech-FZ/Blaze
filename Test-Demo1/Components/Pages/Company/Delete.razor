@@ -6,16 +6,16 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager
 
-<PageTitle>Delete Company - Blaze</PageTitle>
+<PageTitle>Unternehmen löschen - Blaze</PageTitle>
 
-<h1>Delete Company</h1>
+<h1>Unternehmen löschen</h1>
 
-<p>Are you sure you want to delete the following company?</p>
+<p>Sind Sie sicher, dass Sie folgende Firma löschen wollen?</p>
 
 <div>
     @if (company == null)
     {
-        <p><em>Loading Company...</em></p>
+        <p><em>Bitte warten...</em></p>
     }
 
     else
@@ -26,13 +26,13 @@
         </dl>
 
         <dl class="row">
-            <dt class="col-sm-2">Net Worth</dt>
+            <dt class="col-sm-2">Vermögen</dt>
             <dd class="col-sm-10">@company.NetWorth €</dd>
         </dl>
 
         <EditForm Model="company" OnValidSubmit="DeleteCompany" FormName="delete">
-            <button type="submit" class="btn btn-danger" disabled="@(company == null)">Delete</button> |
-            <a href="/Company">Back to Company List</a>
+            <button type="submit" class="btn btn-danger" disabled="@(company == null)">Löschen</button> |
+            <a href="/Company">Zurück zur Unternehmensliste</a>
         </EditForm>
     }
 </div>
@@ -40,7 +40,7 @@
 @if (!string.IsNullOrEmpty(ErrorMessage))
 {
     <div class="alert alert-danger" role="alert" style="margin-top: 10px;">
-        <strong>Error:</strong> @ErrorMessage
+        <strong>Fehler:</strong> @ErrorMessage
     </div>
 }
 
@@ -77,12 +77,12 @@
         {
             if (context.Characters.Any(c => c.SelectedCompanyId == company.Id))
             {
-                ErrorMessage = "This company still has employees. Please either delete those or change their companies.";
+                ErrorMessage = "Diese Firma beschäftigt noch Mitarbeiter. Bitte löschen Sie diese oder wechseln Sie deren Firma.";
             }
 
             else if (context.SocialMedias.Any(sm => sm.SelectedCompanyId == company.Id))
             {
-                ErrorMessage = "There are still social media links attached to this company. Please delete those first.";
+                ErrorMessage = "Diese Firma hat noch Einträge zu sozialen Medien. Bitte löschen Sie diese zuerst.";
             }
 
             else
