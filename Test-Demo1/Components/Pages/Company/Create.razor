@@ -6,15 +6,15 @@
 @inject IDbContextFactory<BlazeDbContext> DbFactory
 @inject NavigationManager NavigationManager
 
-<PageTitle>Create Company - Blaze</PageTitle>
+<PageTitle>Unternehmen erstellen - Blaze</PageTitle>
 
-<h1>Create Company</h1>
+<h1>Unternehmen erstellen</h1>
 
 <hr />
 
 @if (Company == null)
 {
-    <p><em>Loading...</em></p>
+    <p><em>Bitte warten...</em></p>
 }
 
 else
@@ -33,12 +33,12 @@ else
                 </div>
 
                 <div class="mb-3">
-                    <label for="link" class="form-label">Net Worth in €:</label>
+                    <label for="link" class="form-label">Vermögen in €:</label>
                     <InputNumber id="link" @bind-Value="Company.NetWorth" class="form-control" />
                     <ValidationMessage For="() => Company.NetWorth" class="text-danger" />
                 </div>
 
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-primary">Speichern</button>
             </EditForm>
         </div>
     </div>
