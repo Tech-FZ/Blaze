@@ -26,6 +26,6 @@ Generally, there are three different ways to set up a development environment fo
 5. Open a C# or Razor file.
 6. Open a terminal on Visual Studio Code.
 7. Type in `dotnet user-secrets init`
-8. Type in `dotnet user-secrets "ConnectionStrings:BlazeDbContext" "server=(insert-server-here);database=blazedb;user=(insert-user-here);password=(insert-password-here)"`. Replace the (insert-x-here) variables with your actual server connection information. Leave the password parameter out if there is no password.
+8. Type in `dotnet user-secrets set "ConnectionStrings:BlazeDbContext" "server=(insert-server-here);database=blazedb;user=(insert-user-here);password=(insert-password-here)"`. Replace the (insert-x-here) variables with your actual server connection information. Leave the password parameter out if there is no password.
 9. Press <kbd>F5</kbd> to run the program. You may need to set it up with C# > Launch Startup Project.
 10. If your MySQL server is reachable, you should be greeted by your web browser opening the homepage of this Web App.

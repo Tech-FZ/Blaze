@@ -17,144 +17,143 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.TargetFrameworkIdentifier = .NETCoreApp
 build_property.TargetFrameworkVersion = v10.0
-build_property.EntryPointFilePath = 
 build_property.RootNamespace = Test_Demo1
 build_property.RootNamespace = Test_Demo1
-build_property.ProjectDir = C:\Users\nlettau\Documents\Azubi-Treff\Blaze backup\Blaze\Test-Demo1\
+build_property.ProjectDir = /media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.RazorLangVersion = 10.0
+build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\nlettau\Documents\Azubi-Treff\Blaze backup\Blaze\Test-Demo1
+build_property.MSBuildProjectDirectory = /media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/App.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Create.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcQ3JlYXRlLnJhem9y
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Character/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DaGFyYWN0ZXIvQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Delete.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcRGVsZXRlLnJhem9y
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Character/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DaGFyYWN0ZXIvRGVsZXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Details.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcRGV0YWlscy5yYXpvcg==
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Character/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DaGFyYWN0ZXIvRGV0YWlscy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Edit.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcRWRpdC5yYXpvcg==
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Character/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DaGFyYWN0ZXIvRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Character/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDaGFyYWN0ZXJcSW5kZXgucmF6b3I=
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Character/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DaGFyYWN0ZXIvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Create.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XENyZWF0ZS5yYXpvcg==
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Company/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db21wYW55L0NyZWF0ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Delete.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XERlbGV0ZS5yYXpvcg==
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Company/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db21wYW55L0RlbGV0ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Details.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XERldGFpbHMucmF6b3I=
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Company/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db21wYW55L0RldGFpbHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Edit.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XEVkaXQucmF6b3I=
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Company/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db21wYW55L0VkaXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Company/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb21wYW55XEluZGV4LnJhem9y
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Company/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Db21wYW55L0luZGV4LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Create.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcQ3JlYXRlLnJhem9y
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Gender/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9HZW5kZXIvQ3JlYXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Delete.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcRGVsZXRlLnJhem9y
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Gender/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9HZW5kZXIvRGVsZXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Edit.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcRWRpdC5yYXpvcg==
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Gender/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9HZW5kZXIvRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Gender/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xHZW5kZXJcSW5kZXgucmF6b3I=
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Gender/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9HZW5kZXIvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/License.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMaWNlbnNlLnJhem9y
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/License.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MaWNlbnNlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/NotFound.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xOb3RGb3VuZC5yYXpvcg==
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/NotFound.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ob3RGb3VuZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/SocialMedia/Create.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2NpYWxNZWRpYVxDcmVhdGUucmF6b3I=
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/SocialMedia/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Tb2NpYWxNZWRpYS9DcmVhdGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/SocialMedia/Delete.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2NpYWxNZWRpYVxEZWxldGUucmF6b3I=
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/SocialMedia/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Tb2NpYWxNZWRpYS9EZWxldGUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Pages/SocialMedia/Edit.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xTb2NpYWxNZWRpYVxFZGl0LnJhem9y
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Pages/SocialMedia/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Tb2NpYWxNZWRpYS9FZGl0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Routes.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/_Imports.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Layout/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-mz3s9fu4ps
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-izabkyzqze
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Layout/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-79wcpsvuuw
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-y3z61s8o6t
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Components/Layout/ReconnectModal.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcUmVjb25uZWN0TW9kYWwucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-3co6x98mjm
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Components/Layout/ReconnectModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvUmVjb25uZWN0TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xix3rghuyl
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Localisation/LocalisationResources.resx]
-build_metadata.AdditionalFiles.TargetPath = Localisation\LocalisationResources.resx
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Localisation/LocalisationResources.resx]
+build_metadata.AdditionalFiles.TargetPath = Localisation/LocalisationResources.resx
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.resx]
-build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.resx
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Resources/LocalisationResources.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources/LocalisationResources.resx
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Localisation/LocalisationResources.de.resx]
-build_metadata.AdditionalFiles.TargetPath = Localisation\LocalisationResources.de.resx
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Localisation/LocalisationResources.de.resx]
+build_metadata.AdditionalFiles.TargetPath = Localisation/LocalisationResources.de.resx
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.de.resx]
-build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.de.resx
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Resources/LocalisationResources.de.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources/LocalisationResources.de.resx
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nlettau/Documents/Azubi-Treff/Blaze backup/Blaze/Test-Demo1/Resources/LocalisationResources.en.resx]
-build_metadata.AdditionalFiles.TargetPath = Resources\LocalisationResources.en.resx
+[/media/elisa/Crosser/Coding/Blaze/Main/Blaze/Test-Demo1/Resources/LocalisationResources.en.resx]
+build_metadata.AdditionalFiles.TargetPath = Resources/LocalisationResources.en.resx
 build_metadata.AdditionalFiles.CssScope = 
